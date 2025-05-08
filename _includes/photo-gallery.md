@@ -2,18 +2,18 @@
 
 <div class="gallery-container">
   <div class="gallery-grid">
-    <img src="{{ site.baseurl }}/assets/images/15.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/02.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/6I1A3725.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/01.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/0.png" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/14.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/03.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/13.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/1.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/2.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/3.jpg" loading="lazy" onclick="openGalleryModal(this)">
-    <img src="{{ site.baseurl }}/assets/images/4.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/15.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/02.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/6I1A3725.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/01.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/0.png" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/14.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/03.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/13.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/1.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/2.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/3.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/4.jpg" loading="lazy" onclick="openGalleryModal(this)">
     <img src="/assets/images/5.jpg" loading="lazy" onclick="openGalleryModal(this)">
     <img src="/assets/images/6.jpg" loading="lazy" onclick="openGalleryModal(this)">
     <img src="/assets/images/7.jpg" loading="lazy" onclick="openGalleryModal(this)">
