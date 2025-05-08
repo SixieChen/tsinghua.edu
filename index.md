@@ -8,16 +8,16 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 ## Research Interests
 
-- **Electrochemistry Mechanism & Energy Storage Devices** 
-- **Solid State Ionic & Ion-Insertion Devices**
-- **Functional Oxide films & Related External field response device**
+- **Electron Microscopy** 
+- **Microstructure Characterization of Functional Materials**
+- **Solid State Ionics**
 
 ## Awards
 
 - **Awards for Science and Technology Innovation Excellence**
 - **Awards for Social Work Excellence**
 - **Awards for Volunteer Service Excellence**
-- **Bauhinia Four-star Volunteer**
+- **Bauhinia Five-star Volunteer**
 - **Excellent Poster:** Tsinghua University academic promotion program.
 - **University-level third-prize:** Challenge Cup Competition for science and techonology exhibition. 
 - **Social Practice Gold Medal:** Sixie Chen led the team to participate in the social practice and won the highest award.
@@ -28,6 +28,7 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 ## News
 
+- **[Feb. 2025]** Sixie Chen jions Beijing Electron Microscope Center, advised by Professor, Lin Gu.
 - **[Jan. 2025]** Sixie Chen visits the North Carolina State Univerisity, advised by Professor, Liming Xiong.
 - **[Dec. 2024]** Sixie Chen becomes a formal member of the Communist Party of China. 
 - **[Oct. 2024]** Sixie Chen initiats the project funded by Beijing Natural Science Foundation Undergraduate Qiyan Plan, QY24235.
