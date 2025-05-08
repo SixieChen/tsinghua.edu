@@ -39,3 +39,5 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 - **[Sept. 2022]** Sixie Chen jions Tsinghua University as an undergraduate student.
 
 {% include_relative _includes/services.md %}
+
+{% include_relative _includes/photo-gallery.md %}
