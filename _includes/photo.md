@@ -3,7 +3,7 @@
 
 <div class="gallery-container">
   <div class="gallery-grid">
-    {% for i in (1..16) %}
+    {% for i in (1..20) %}
       {% assign image_path = '/assets/images/' | append: i | append: '.jpg' %}
       <div class="gallery-item">
         <img src="{{ image_path | relative_url }}" 
