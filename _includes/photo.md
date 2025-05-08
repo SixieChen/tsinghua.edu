@@ -2,7 +2,7 @@
 
 <div class="gallery-container">
   <div class="gallery-grid">
-    <img src="/assets/images/photo1.jpg" loading="lazy" onclick="openGalleryModal(this)">
+    <img src="/assets/images/02.jpg" loading="lazy" onclick="openGalleryModal(this)">
     <img src="/assets/images/photo2.jpg" loading="lazy" onclick="openGalleryModal(this)">
     <img src="/assets/images/photo3.jpg" loading="lazy" onclick="openGalleryModal(this)">
   </div>
