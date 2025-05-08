@@ -40,4 +40,4 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 {% include_relative _includes/services.md %}
 
-{% include_relative _includes/photo-gallery.md %}
+{% include_relative _includes/photo.md %}
