@@ -4,12 +4,12 @@ layout: homepage
 
 ## About Me
 
-I am an undergraduate student at Tsinghua University, major in Basic Science of Mathmetica & Physics and Material Science & Enjineering-double major.  
+I am an undergraduate student at Tsinghua University, major in Basic Science of Mathmetica & Physics and Material Science & Enjineering-double major. Plus, I'm currently an undergraduate researcher in Prof. Ke Wang's group, Tsinghua University. 
 
 ## Research Interests
 
-- **Electron Microscopy** 
-- **Microstructure Characterization of Functional Materials**
+- **Ferroelectric Ceramics** 
+- **Defect Chemistry**
 - **Solid State Ionics**
 
 ## Awards
@@ -28,6 +28,7 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 ## News
 
+- **[Sep. 2025]** Sixie Chen jions State Key Laboratory of New Ceramics & Fine Processing, advised by Professor, Ke Wang and Dr. Ze Xu.
 - **[Jun. 2025]** Sixie Chen visits deparment of chemistry, Indianna University, Bloomington, advised by Professor. Sara Skrabalak and Dr. Kapuria Nilotpal. 
 - **[Feb. 2025]** Sixie Chen jions Beijing Electron Microscope Center, advised by Professor, Lin Gu.
 - **[Jan. 2025]** Sixie Chen visits the North Carolina State Univerisity, advised by Professor, Liming Xiong.
