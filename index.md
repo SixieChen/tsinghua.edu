@@ -26,6 +26,10 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 {% include_relative _includes/publications.md %}
 
+## Research Grants
+
+- **Beijing Natural Science Foundation**, “Development of Multicomponent Alloy Synergistic Materials and Their Application in Electrolytic Hydrogen Production” (QY24235), ¥80k, PI: Sixie Chen, 2024-2025.
+  
 ## News
 
 - **[Sep. 2025]** Sixie Chen jions State Key Laboratory of New Ceramics & Fine Processing, advised by Professor, Ke Wang and Dr. Ze Xu.
