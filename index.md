@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am an undergraduate student at Tsinghua University, major in Basic Science of Mathmetica & Physics and Material Science & Enjineering-double major. Plus, I'm currently an undergraduate researcher in Prof. Ke Wang's group, Tsinghua University. 
+I am an undergraduate student at Tsinghua University, major in Basic Science of Mathmetica & Physics and Material Science & Enjineering-double major. Plus, I'm currently an undergraduate researcher in **Prof. Ke Wang**'s group, Tsinghua University. 
 
 ## Research Interests
 
