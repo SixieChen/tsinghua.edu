@@ -28,7 +28,7 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 ## Research Grants
 
-- **Beijing Natural Science Foundation**, “Development of Multicomponent Alloy Synergistic Materials and Their Application in Electrolytic Hydrogen Production” (QY24235), ¥80k, PI: Sixie Chen, 2024-2025.
+- **Beijing Natural Science Foundation**, “Development of Multicomponent Alloy Synergistic Materials and Their Application in Electrolytic Hydrogen Production” (QY24235), ¥80k, PI, 2024-2025.
   
 ## News
 
