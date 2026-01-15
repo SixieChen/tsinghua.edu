@@ -8,7 +8,7 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 ## Research Interests
 
-- **Ferroelectric Ceramics** 
+- **Functional Ceramics** 
 - **Defect Chemistry**
 - **Solid State Ionics**
 
