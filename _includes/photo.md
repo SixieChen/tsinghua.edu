@@ -14,7 +14,6 @@
       </div>
     {% endfor %}
   </div>
-
   <div id="galleryModal" class="gallery-modal">
     <span class="gallery-close" onclick="closeGalleryModal()">&times;</span>
     <div class="modal-inner">
