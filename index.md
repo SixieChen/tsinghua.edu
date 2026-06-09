@@ -14,6 +14,7 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 
 ## Awards
 
+- **Outstanding Student Cadre of Tsinghua University**
 - **Outstanding Communist Youth League Member of Tsinghua University**
 - **Awards for Science and Technology Innovation Excellence**
 - **Awards for Social Work Excellence**
