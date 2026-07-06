@@ -73,12 +73,14 @@ section {
   justify-content: center;
   gap: 0.45rem;
   width: 100%;
+  max-width: none;
   margin: 0;
   padding: 0.68rem max(1rem, calc((100vw - 1080px) / 2));
   border-bottom: 1px solid rgba(203, 213, 225, 0.8);
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   box-sizing: border-box;
+  float: none;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
