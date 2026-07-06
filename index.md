@@ -7,10 +7,6 @@ title: Home
 
 I am an undergraduate student at Tsinghua University, majoring in Basic Science of Mathematics and Physics and pursuing a double major in Materials Science and Engineering. I am currently an undergraduate researcher in **Prof. Ke Wang**'s group at Tsinghua University.
 
-## Contact
-
-- **Address:** Tsinghua University, Haidian District, Beijing, China
-- **Email:** chensx22@mails.tsinghua.edu.cn; sixiechen@outlook.com
 
 ## Awards
 
