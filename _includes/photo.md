@@ -2,7 +2,7 @@
 
 <div class="gallery-container">
   <div class="gallery-grid">
-    {% for i in (1..26) %}
+    {% for i in (1..30) %}
       {% assign image_path = '/assets/images/' | append: i | append: '.jpg' %}
       <button class="gallery-item" type="button" onclick="openGalleryModal(this)" aria-label="Open gallery image {{ i }}">
         <img src="{{ image_path | relative_url }}"
