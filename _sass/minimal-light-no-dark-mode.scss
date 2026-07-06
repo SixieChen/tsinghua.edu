@@ -516,3 +516,300 @@ footer {
   display:none;
   font-family: monospace;
 }
+
+/* Site structure refresh */
+.wrapper {
+  width: 1080px;
+}
+
+header {
+  width: 260px;
+}
+
+section {
+  width: 760px;
+}
+
+.profile-meta {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+  color: #4b5563;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.profile-position {
+  color: #043361;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.profile-address {
+  max-width: 230px;
+  margin: 0.2rem auto 0;
+  color: #667085;
+  font-size: 0.86rem;
+}
+
+.profile-email {
+  font-family: "Ubuntu Mono", Consolas, monospace;
+  font-size: 0.86rem;
+}
+
+.profile-coreline {
+  margin-top: 0.3rem;
+  color: #334155;
+}
+
+.social-icons {
+  margin: 0.7rem 0 0.9rem;
+}
+
+.social-icons a {
+  margin: 0 0.15rem;
+}
+
+.site-nav {
+  display: grid;
+  gap: 0.42rem;
+  margin: 1.1rem auto 0;
+  max-width: 220px;
+}
+
+.site-nav a {
+  display: block;
+  border: 1px solid #d7dee8;
+  border-radius: 6px;
+  padding: 0.42rem 0.65rem;
+  color: #043361;
+  background: #ffffff;
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #ffffff;
+  border-color: #043361;
+  background: #043361;
+}
+
+.image.avatar img {
+  width: clamp(112px, 58%, 168px);
+  max-width: 168px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+section > h2:first-child {
+  margin-top: 0;
+}
+
+p,
+li {
+  line-height: 1.65;
+}
+
+pre {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+.pub-row {
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.publications ol.bibliography li .abbr {
+  flex: 0 0 min(34%, 240px);
+  height: auto;
+  min-height: 7rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.publications ol.bibliography li .abbr abbr {
+  left: 0.6rem;
+  top: 0.6rem;
+}
+
+.publications ol.bibliography li .teaser {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  object-fit: cover;
+}
+
+.publications ol.bibliography li .col-sm-9 {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+}
+
+.publication-list,
+.knowledge-list {
+  padding-left: 1.2rem;
+}
+
+.gallery-container {
+  margin: 1.4rem 0 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 0.8rem;
+}
+
+.gallery-item {
+  display: block;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0;
+  background: #ffffff;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.025);
+}
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  background: rgba(8, 13, 23, 0.92);
+}
+
+.gallery-modal-content {
+  max-width: min(96vw, 1200px);
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-close {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.4rem;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 2.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.page-lead {
+  margin: 0 0 1.3rem;
+  color: #475569;
+}
+
+.note-index {
+  margin: 1rem 0 1.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.knowledge-note h2 {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.knowledge-note h3 {
+  margin-top: 1.4rem;
+}
+
+.knowledge-note table {
+  display: block;
+  overflow-x: auto;
+}
+
+.knowledge-note mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+@media print, screen and (max-width: 960px) {
+  .wrapper,
+  header,
+  section,
+  footer {
+    width: auto;
+  }
+
+  header {
+    padding: 1.2rem 0 0.8rem;
+  }
+
+  section {
+    margin: 0;
+    padding: 1.2rem 0;
+  }
+
+  .site-nav {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    max-width: none;
+  }
+
+  .site-nav a {
+    padding: 0.5rem 0.35rem;
+    font-size: 0.84rem;
+  }
+
+  .image.avatar img {
+    width: 124px;
+    padding: 8px;
+  }
+}
+
+@media print, screen and (max-width: 620px) {
+  .site-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pub-row {
+    display: block;
+  }
+
+  .publications ol.bibliography li .abbr {
+    max-width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .gallery-modal {
+    padding: 1rem;
+  }
+}

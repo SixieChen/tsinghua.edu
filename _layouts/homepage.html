@@ -33,6 +33,19 @@
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    {% if site.mathjax %}
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: { fontCache: 'global' }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    {% endif %}
 
   </head>
   <body>
@@ -45,60 +58,64 @@
 
         <h1>{{ site.title }}</h1>
 
+        <div class="profile-meta">
         {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
-        <br>
+        <div class="profile-position">{{ site.position }}</div>
         {% endif %}
         {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-        <br>
+        <div class="profile-affiliation"><a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a></div>
+        {% endif %}
+        {% if site.address %}
+        <div class="profile-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ site.address }}</div>
         {% endif %}
         {% if site.email-1 %}
-        <email-1>{{ site.email-1 }}</email-1>
+        <div class="profile-email">{{ site.email-1 }}</div>
         {% endif %}
         {% if site.email-2 %}
-        <email-2>{{ site.email-2 }}</email-2>
-        <br>
+        <div class="profile-email">{{ site.email-2 }}</div>
         {% endif %}
         {% if site.CoreLine %}
-        <CoreLine>{{ site.CoreLine }}</CoreLine>
-        <br>
+        <div class="profile-coreline">{{ site.CoreLine }}</div>
         {% endif %}
-        <br>
-        <br>
-        <br>
+        </div>
         <div class="social-icons">
         {% if site.google_scholar %}
-        <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
+        <a href="{{ site.google_scholar }}" aria-label="Google Scholar">
           <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
         </a>  
         {% endif %}
 
         {% if site.cv_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
+        <a href="{{ site.cv_link }}" aria-label="CV">
           <i class="ai ai-cv" style="font-size:1.3rem;"></i>
         </a>
         {% endif %}
 
         {% if site.github_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
+        <a href="{{ site.github_link }}" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
         {% endif %}
 
         {% if site.linkedin %}
-        <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
+        <a href="{{ site.linkedin }}" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
         {% endif %}
 
         {% if site.twitter %}
-        <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
+        <a href="{{ site.twitter }}" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
         {% endif %}
         </div>
-        <br>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+          <a href="{{ '/research.html' | relative_url }}" {% if page.url == '/research.html' %}class="active"{% endif %}>Research</a>
+          <a href="{{ '/publications.html' | relative_url }}" {% if page.url == '/publications.html' %}class="active"{% endif %}>Publications</a>
+          <a href="{{ '/gallery.html' | relative_url }}" {% if page.url == '/gallery.html' %}class="active"{% endif %}>Gallery</a>
+          <a href="{{ '/knowledge.html' | relative_url }}" {% if page.url == '/knowledge.html' %}class="active"{% endif %}>Knowledge</a>
+        </nav>
 
       </header>
       <section>

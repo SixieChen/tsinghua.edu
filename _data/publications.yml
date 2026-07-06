@@ -1,11 +1,10 @@
 main:
 
   - title: Enhancing CO2 Reduction via Cu Nanocrystals Decorated Perovskite as Cathode for Solid Oxide Electrolysis Cells
-    authors: Min Xu*, Yan Lin, Xi Chen, <strong>Sixie Chen</strong>, Di Chen* (*Corresponding authors)
+    authors: Y. Lin, M. Xu, X. Chen, <strong>S. Chen</strong>, X. Li, W. Yan, R. Zhou, D. Chen
     conference_short: CI
-    conference: Ceramics International <strong>(CI)</strong>, 2025.
-    pdf: https://pdf.sciencedirectassets.com/271590/AIP/1-s2.0-S0272884225000410/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB0aCXVzLWVhc3QtMSJHMEUCIQCLZZFBpomrP3H2y6DKPgaJV7LW%2FHwjM6OnHbzeP5h2owIgSdMEsKTmVdcsdJ7dW3KIIKu0dlsS6V3fmTj7BNFkTUQqswUINRAFGgwwNTkwMDM1NDY4NjUiDO1xMweFJ8G%2FZbEpOSqQBYu8IYi5KuLQMCaMUxJCfcQsQ0FkD9gmm6fRgcF5VHUKp98EU%2FVAwG9ZG1hm6CITG3tiCkpRUJjc3J1Uy084kfqszYybGl2nEj6C%2FIiMP1m0ztdi%2BC23i1aguS6sqnu8OmQC1k3Mtt30zWNOv%2BxljgY6MVWm%2BZseRTgIN2mtG6mVKyXRmqDHRyKWhWclYRUKZVBLqCZX9Wt0lEn5zbiEmYTbOn5hu6lbubmHjmyFeSPeqlXxpYOQ1jhSb0xzuG1xrTpM8mnGeVa%2FuagQiBraJQnJAL99ZwHqjlznkU9sQQUmCsLvnYKTKxtoDIVavv%2FE5wPSdPfXAcTXjLv%2B1Jw%2F0K4ASkIEaTZvMobWWytw%2BAdD5zzED24K8RXVinUIVpas3CXQt3ryrbU5qWFxyvzTIMNI12lYXXGMtq1qF7%2BYqrTk8t9dcQYWVGNAht7kX4%2F8EA8G8l5fJAR5WUDyr3mcHB0YdmpEGrSrk9ZDfNu0cuDg0Rc5NL1R1irFTd7SCgwaDDv%2FBGGnt5BGbd4XWKwnOkKl71%2BXZX6DBugetJk2tyLB0EqNvqcLX9GV3bnNY7a5R6SP9er98iZiuKnFA%2BfNpUDMq8jTHdPf3QEGGjdaR8RgX6QP4PSrj9OnU%2Bkp1z1JlXMekjLjOfsuBUV6i1im%2FyA48Q7EcgvG3Xuw4mdFFB%2BqHichn6qEHSDBmMWijUWCya95dVsk%2BCz6dkLORc1VgXk2j5%2Bds0ajYDWnvGdAzdBDsLOAuRsg19x15%2FhGtzeGzN0YyV%2FUnrrPCjXGiZB7Iw%2BX9lBFTH20Z4B511JsFh4mOZeFbt6IxB3KPmXyJzczqKmCmOAINql2twIaoLocea6w5blaDUD7rFsxVLWNzbC7MNzsib0GOrEBWqOsVY38MNEC7tso1JKfYVCSPfarCkzjKhm9RZk%2BlqmSl2f1dfXWAicvq4qmLV0OKj5Q7sIjDhy5shjxLXH9avtOwToPEsfRXfQcNawX3X7tkUr3UYrdIwMxekrKX2LswJzc8J8n8MzH%2Fgof0s9WJeVKy5DsGbjfFRkOdkvNo5A3dvICbsAJLLf7Xb5g5HN%2BTpqIIGW%2FioQTTemT7ky1nHXaAhO50iujshOcEAfO1SsI&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250204T204701Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYXOZXZZLY%2F20250204%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e951c48994d7ba13ee57be1daf0a0bcfe6ff4b53ef1807ca94792328bb84c116&hash=7cb9556730399904aec438cf4a444c18d248634d7d240e66b11b9c53ee54619c&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0272884225000410&tid=spdf-157074e3-e912-46e2-a0fd-0da99ce701cb&sid=edbb5b3715b5554b0e490a9872805a600553gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=13155c5f05035757505f&rr=90cd83708d3020c4&cc=us
-    page: https://www.sciencedirect.com/science/article/pii/S0272884225000410#fig6
+    conference: Ceramics International <strong>51</strong>(9), 11889-11898.
+    page: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nnmO3tEAAAAJ&citation_for_view=nnmO3tEAAAAJ:UeHWp8X0CEIC
     notes: Published
     image: ./assets/img/1-s2.0-S0272884225000410-gr8_lrg.jpg
 

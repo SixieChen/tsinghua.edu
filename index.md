@@ -1,16 +1,16 @@
 ---
 layout: homepage
+title: Home
 ---
 
 ## About Me
 
-I am an undergraduate student at Tsinghua University, major in Basic Science of Mathmetica & Physics and Material Science & Enjineering-double major. Plus, I'm currently an undergraduate researcher in **Prof. Ke Wang**'s group, Tsinghua University. 
+I am an undergraduate student at Tsinghua University, majoring in Basic Science of Mathematics and Physics and pursuing a double major in Materials Science and Engineering. I am currently an undergraduate researcher in **Prof. Ke Wang**'s group at Tsinghua University.
 
-## Research Interests
+## Contact
 
-- **Functional Ceramics** 
-- **Defect Chemistry**
-- **Solid State Ionics**
+- **Address:** Tsinghua University, Haidian District, Beijing, China
+- **Email:** chensx22@mails.tsinghua.edu.cn; sixiechen@outlook.com
 
 ## Awards
 
@@ -26,23 +26,15 @@ I am an undergraduate student at Tsinghua University, major in Basic Science of 
 - **Excellence Award:** 3D printing design competition.
 - **Outstanding Students:** the 39th summer school of Tsinghua University.
 
-{% include_relative _includes/publications.md %}
-
-## Research Grants
-
-- **Beijing Natural Science Foundation**, “Development of Multicomponent Alloy Synergistic Materials and Their Application in Electrolytic Hydrogen Production” (QY24235), ¥80k, PI, 2024-2025.
-  
 ## News
 
-- **[Sep. 2025]** Sixie Chen jions State Key Laboratory of New Ceramics & Fine Processing, advised by Professor, Ke Wang and Dr. Ze Xu.
-- **[Jun. 2025]** Sixie Chen visits deparment of chemistry, Indianna University, Bloomington, advised by Professor. Sara Skrabalak and Dr. Kapuria Nilotpal. 
-- **[Feb. 2025]** Sixie Chen jions Beijing Electron Microscope Center, advised by Professor, Lin Gu.
-- **[Jan. 2025]** Sixie Chen visits the North Carolina State Univerisity, advised by Professor, Liming Xiong.
+- **[Sep. 2025]** Sixie Chen joins the State Key Laboratory of New Ceramics and Fine Processing, advised by Prof. Ke Wang and Dr. Ze Xu.
+- **[Jun. 2025]** Sixie Chen visits the Department of Chemistry, Indiana University Bloomington, advised by Prof. Sara Skrabalak and Dr. Kapuria Nilotpal.
+- **[Feb. 2025]** Sixie Chen joins the Beijing Electron Microscope Center, advised by Prof. Lin Gu.
+- **[Jan. 2025]** Sixie Chen visits North Carolina State University, advised by Prof. Liming Xiong.
 - **[Dec. 2024]** Sixie Chen becomes a formal member of the Communist Party of China. 
-- **[Oct. 2023]** Sixie Chen jions Future lab, advised by Professor, Di Chen and Researcher, Min Xu. 
-- **[Apri. 2023]** Sixie Chen jions NEXT"Next-generation Electronic X-integration Technology" lab, advised by Professor, Chen Wang.
-- **[Sept. 2022]** Sixie Chen jions Tsinghua University as an undergraduate student.
+- **[Oct. 2023]** Sixie Chen joins Future Lab, advised by Prof. Di Chen and Researcher Min Xu.
+- **[Apr. 2023]** Sixie Chen joins NEXT, the Next-generation Electronic X-integration Technology Lab, advised by Prof. Chen Wang.
+- **[Sep. 2022]** Sixie Chen joins Tsinghua University as an undergraduate student.
 
 {% include_relative _includes/services.md %}
-
-{% include_relative _includes/photo.md %}

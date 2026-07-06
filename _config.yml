@@ -2,15 +2,19 @@
 title: Sixie Chen
 position: Undergraduate Student
 affiliation: Tsinghua University
+affiliation_link: https://www.tsinghua.edu.cn/en/
+address: Tsinghua University, Haidian District, Beijing, China
 email-1: chensx22@mails.tsinghua.edu.cn
 email-2: sixiechen@outlook.com
 CoreLine: Prospective Ph.D. Student at Tsinghua University. 
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
+keywords: Sixie Chen, Tsinghua University, functional ceramics, defect chemistry, solid state ionics, impedance spectroscopy
+description: Sixie Chen's academic homepage at Tsinghua University.
+canonical: https://sixiechen.github.io/tsinghua.edu/
+url: https://sixiechen.github.io
+baseurl: /tsinghua.edu
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
@@ -41,6 +45,9 @@ font: "Serif" # or "Sans Serif"
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
 google_analytics: UA-111540567-4
+
+# Math rendering for knowledge notes
+mathjax: true
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
