@@ -5,11 +5,12 @@ title: Home
 
 ## About Me
 
-I am an undergraduate student at Tsinghua University, majoring in Basic Science of Mathematics and Physics and pursuing a double major in Materials Science and Engineering. I am currently an undergraduate researcher in **Prof. Ke Wang**'s group at State Key Laboratory of New Ceramics and Fine Processing, School of Materials Science and Engineering, Tsinghua University.
+I am currently a phd candidate in State Key Laboratory of New Ceramics and Fine Processing, School of Materials Science and Engineering, Tsinghua University, advised by **Prof. Ke Wang** and **Dr. Ze Xu**. I received my bachelor’s degree from Tsinghua University, where I majored in Basic Science of Mathematics and Physics and completed a second major in Materials Science and Engineering.
 
 
 ## Awards
 
+- **Award for Outstanding Thesis, School of Materials Science and Engineering**
 - **Outstanding Student Cadre of Tsinghua University**
 - **Outstanding Communist Youth League Member of Tsinghua University**
 - **Awards for Science and Technology Innovation Excellence**
@@ -24,6 +25,7 @@ I am an undergraduate student at Tsinghua University, majoring in Basic Science 
 
 ## News
 
+- **[June. 2026]** Sixie Chen graduates from Tsinghua University with bachelor degree.
 - **[Sep. 2025]** Sixie Chen joins the State Key Laboratory of New Ceramics and Fine Processing, advised by **Prof. Ke Wang** and **Dr. Ze Xu**.
 - **[Jun. 2025]** Sixie Chen visits the Department of Chemistry, Indiana University Bloomington, advised by Prof. Sara Skrabalak and Dr. Kapuria Nilotpal.
 - **[Feb. 2025]** Sixie Chen joins the Beijing Electron Microscope Center, advised by Prof. Lin Gu.
