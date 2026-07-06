@@ -1,43 +1,43 @@
-﻿---
+---
 layout: homepage
 title: Knowledge
 permalink: /knowledge.html
+body_class: knowledge-page
 ---
 
 ## Knowledge Notes
 
-<div class="page-lead" markdown="1">
-This page collects technical notes and research summaries. The first note below was converted from your LaTeX file on impedance spectroscopy, defect chemistry, Fermi-level thermodynamics, and KNN-related transport analysis.
+<div class="page-lead">
+<p>This page collects technical notes and research summaries. The first note below was converted from your LaTeX file on impedance spectroscopy, defect chemistry, Fermi-level thermodynamics, and KNN-related transport analysis.</p>
 </div>
 
-<div class="note-index" markdown="1">
-**Current notes**
-
-- [Fundamentals of Impedance Spectroscopy](#fundamentals-of-impedance-spectroscopy)
+<div class="note-index">
+<strong>Current notes</strong>
+<ul>
+  <li><a href="#fundamentals-of-impedance-spectroscopy">Fundamentals of Impedance Spectroscopy</a></li>
+</ul>
 </div>
-
-<article class="knowledge-note" markdown="1">
 
 # Fundamentals of Impedance Spectroscopy
 ## Introduction to Impedance
 
 Impedance spectroscopy measures the dielectric properties of a medium as a function of frequency. It is based on the interaction of an external field with the electric dipole moment of the sample.
 
-When an alternating voltage $V(t)$ is applied to a system, the resulting current $I(t)$ responds with a phase shift. Using complex exponential notation, we define the voltage and current as: 
+When an alternating voltage $V(t)$ is applied to a system, the resulting current $I(t)$ responds with a phase shift. Using complex exponential notation, we define the voltage and current as:
 $$
 V(t) = V_0 e^{j\omega t}
 $$
- 
+
 $$
 I(t) = I_0 e^{j(\omega t + \theta)}
 $$
  where $\omega = 2\pi f$ is the angular frequency, $\theta$ is the phase shift, and $j = \sqrt{-1}$.
 
-The complex impedance $Z^*$ is defined by Ohm's law generalized for AC circuits: 
+The complex impedance $Z^*$ is defined by Ohm's law generalized for AC circuits:
 $$
 Z^* = \frac{V(t)}{I(t)} = \frac{V_0 e^{j\omega t}}{I_0 e^{j(\omega t + \theta)}} = \frac{V_0}{I_0} e^{-j\theta}
 $$
- Using Euler's formula ($e^{-j\theta} = \cos\theta - j\sin\theta$), we can separate impedance into its real part ($Z'$, resistance) and imaginary part ($Z''$, reactance): 
+ Using Euler's formula ($e^{-j\theta} = \cos\theta - j\sin\theta$), we can separate impedance into its real part ($Z'$, resistance) and imaginary part ($Z''$, reactance):
 $$
 Z^* = |Z|(\cos\theta - j\sin\theta) = Z' - jZ''
 $$
@@ -51,17 +51,17 @@ Impedance data is typically visualized using Nyquist and Bode plots, which allow
 
 The Bode plot separates the single complex impedance equation into two frequency-dependent plots (Magnitude and Phase). The X-axis is plotted logarithmically to show a massive range of frequencies: $x = \log_{10}(f)$ or $x = \log_{10}(\omega)$.
 
-- **Magnitude (Left Y-Axis):** This is the physical length of the complex vector. It is often plotted in decibels (dB) or as a standard $\log_{10}$ value. 
+- **Magnitude (Left Y-Axis):** This is the physical length of the complex vector. It is often plotted in decibels (dB) or as a standard $\log_{10}$ value.
 $$
 |Z| = \sqrt{(Z')^2 + (Z'')^2}
 $$
- 
+
 $$
 |Z|_{\text{dB}} = 20 \log_{10}(|Z|)
 $$
 
 
-- **Phase Angle (Right Y-Axis):** This is the angle of the complex vector, representing the time delay between voltage and current. 
+- **Phase Angle (Right Y-Axis):** This is the angle of the complex vector, representing the time delay between voltage and current.
 $$
 \theta = \arctan\left(\frac{Z''}{Z'}\right)
 $$
@@ -77,37 +77,37 @@ The reason Bode plots use logarithms is that multiplying and dividing complex nu
 
 Impedance data can be represented in four interrelated complex formalisms. By rationalizing the denominators, we can explicitly derive the real and imaginary parts of each:
 
-**1. Impedance:** 
+**1. Impedance:**
 $$
 Z^* = Z' - jZ''
 $$
 
 
-**2. Admittance:** 
+**2. Admittance:**
 $$
 Y^* = \frac{1}{Z^*} = \frac{1}{Z' - jZ''} = \frac{Z' + jZ''}{(Z')^2 + (Z'')^2}
 $$
- 
+
 $$
 Y' = \frac{Z'}{|Z|^2}, \quad Y'' = \frac{Z''}{|Z|^2}
 $$
 
 
-**3. Permittivity:** 
+**3. Permittivity:**
 $$
 \epsilon^* = \frac{Y^*}{j\omega C_0} = \frac{Y' + jY''}{j\omega C_0} = \frac{Y''}{\omega C_0} - j\frac{Y'}{\omega C_0}
 $$
- 
+
 $$
 \epsilon' = \frac{Y''}{\omega C_0}, \quad \epsilon'' = \frac{Y'}{\omega C_0}
 $$
 
 
-**4. Electric Modulus:** 
+**4. Electric Modulus:**
 $$
 M^* = \frac{1}{\epsilon^*} = j\omega C_0 Z^* = j\omega C_0 (Z' - jZ'') = \omega C_0 Z'' + j\omega C_0 Z'
 $$
- 
+
 $$
 M' = \omega C_0 Z'', \quad M'' = \omega C_0 Z'
 $$
@@ -153,19 +153,19 @@ An inductor's impedance rises as frequency increases.
 
 When components are combined, the impedance responses bend. A parallel RC circuit represents a single relaxation process (\"pole\"), which is the foundation of modeling grain and grain boundary responses.
 
-The total complex impedance is: 
+The total complex impedance is:
 $$
 Z = \left( \frac{1}{R} + j\omega C \right)^{-1} = \frac{R}{1 + j\omega RC}
 $$
 
 
-The characteristic relaxation time, $\tau$, is given by: 
+The characteristic relaxation time, $\tau$, is given by:
 $$
 \tau = RC
 $$
 
 
-The **Corner Frequency (Cutoff)** is the exact frequency where the Bode plot transitions from flat to a downward slope ($\omega RC = 1$): 
+The **Corner Frequency (Cutoff)** is the exact frequency where the Bode plot transitions from flat to a downward slope ($\omega RC = 1$):
 $$
 f_c = \frac{1}{2\pi RC}
 $$
@@ -189,7 +189,7 @@ Z = \frac{R(1 - j\omega RC)}{(1 + j\omega RC)(1 - j\omega RC)} = \frac{R - j\ome
 $$
 
 
-This defines our complex coordinates: 
+This defines our complex coordinates:
 $$
 \begin{aligned}
     Z' &= \frac{R}{1 + (\omega RC)^2} \\
@@ -200,13 +200,13 @@ $$
 
 We want to prove these coordinates form a circle centered at $(R/2, 0)$ with a radius of $R/2$. We evaluate $(Z' - R/2)^2 + (Z'')^2$.
 
-First, shift the real part: 
+First, shift the real part:
 $$
 Z' - \frac{R}{2} = \frac{R}{1 + (\omega RC)^2} - \frac{R}{2} = \frac{2R - R(1 + (\omega RC)^2)}{2(1 + (\omega RC)^2)} = \frac{R(1 - (\omega RC)^2)}{2(1 + (\omega RC)^2)}
 $$
 
 
-Square both terms and sum them: 
+Square both terms and sum them:
 $$
 \begin{aligned}
     \left(Z' - \frac{R}{2}\right)^2 + (Z'')^2 &= \frac{R^2(1 - (\omega RC)^2)^2}{4(1 + (\omega RC)^2)^2} + \frac{\omega^2 R^4 C^2}{(1 + (\omega RC)^2)^2} \\[10pt]
@@ -227,13 +227,13 @@ Ideal resistors and capacitors are often insufficient for real solid-state mater
 
 ### Constant Phase Element (CPE)
 
-To account for depressed semicircles in the Nyquist plot (caused by surface roughness, defect distribution, or non-ideal behavior), the CPE replaces the ideal capacitor: 
+To account for depressed semicircles in the Nyquist plot (caused by surface roughness, defect distribution, or non-ideal behavior), the CPE replaces the ideal capacitor:
 $$
 Z_{CPE} = \frac{1}{Q(j\omega)^n}
 $$
  where $Q$ is a pseudo-capacitance parameter, and $n$ is an empirical constant ($0 \leq n \leq 1$).
 
-By applying Euler's formula for fractional powers of $j$, where $j^n = (\exp(j\pi/2))^n = \exp(jn\pi/2) = \cos(n\pi/2) + j\sin(n\pi/2)$, we can explicitly expand the CPE impedance: 
+By applying Euler's formula for fractional powers of $j$, where $j^n = (\exp(j\pi/2))^n = \exp(jn\pi/2) = \cos(n\pi/2) + j\sin(n\pi/2)$, we can explicitly expand the CPE impedance:
 $$
 Z_{CPE} = \frac{1}{Q\omega^n} \left[ \cos\left(\frac{n\pi}{2}\right) - j\sin\left(\frac{n\pi}{2}\right) \right]
 $$
@@ -241,7 +241,7 @@ $$
 
 ### Warburg Impedance (Diffusion)
 
-At low frequencies, mass transport (diffusion) becomes the rate-limiting step. This is modeled by the Warburg impedance, $Z_W$, which is functionally a specialized CPE where $n = 0.5$: 
+At low frequencies, mass transport (diffusion) becomes the rate-limiting step. This is modeled by the Warburg impedance, $Z_W$, which is functionally a specialized CPE where $n = 0.5$:
 $$
 Z_W = \frac{A_W}{\sqrt{\omega}} (1 - j)
 $$
@@ -249,21 +249,21 @@ $$
 
 ### Debye Relaxation Model
 
-For ideal dielectric relaxation, the frequency-dependent complex permittivity is described by the Debye equation: 
+For ideal dielectric relaxation, the frequency-dependent complex permittivity is described by the Debye equation:
 $$
 \epsilon^*(\omega) = \epsilon_\infty + \frac{\epsilon_s - \epsilon_\infty}{1 + j\omega \tau}
 $$
  where $\epsilon_s$ is the static (low-frequency) permittivity, and $\epsilon_\infty$ is the high-frequency permittivity.
 
-By multiplying the numerator and denominator by the complex conjugate $(1 - j\omega\tau)$, we can separate this into its real dielectric constant ($\epsilon'$) and imaginary dielectric loss ($\epsilon''$): 
+By multiplying the numerator and denominator by the complex conjugate $(1 - j\omega\tau)$, we can separate this into its real dielectric constant ($\epsilon'$) and imaginary dielectric loss ($\epsilon''$):
 $$
 \epsilon^*(\omega) = \epsilon_\infty + \frac{(\epsilon_s - \epsilon_\infty)(1 - j\omega\tau)}{1 + (\omega\tau)^2}
 $$
- 
+
 $$
 \epsilon'(\omega) = \epsilon_\infty + \frac{\epsilon_s - \epsilon_\infty}{1 + (\omega\tau)^2}
 $$
- 
+
 $$
 \epsilon''(\omega) = \frac{(\epsilon_s - \epsilon_\infty)\omega\tau}{1 + (\omega\tau)^2}
 $$
@@ -277,7 +277,7 @@ By fitting experimental impedance data to equivalent circuits built from these e
 
 For a parallel plate capacitor, the geometric capacitance $C$ is defined as $C = \epsilon' \epsilon_0 \frac{A}{l}$, where $l$ is the thickness.
 
-Using the **Brickwork Model** for ceramics, if $l_1$ represents the grain dimension and $l_2$ represents the grain boundary thickness, the ratio of bulk capacitance ($C_b$) to grain boundary capacitance ($C_{gb}$) is approximated by: 
+Using the **Brickwork Model** for ceramics, if $l_1$ represents the grain dimension and $l_2$ represents the grain boundary thickness, the ratio of bulk capacitance ($C_b$) to grain boundary capacitance ($C_{gb}$) is approximated by:
 $$
 \frac{C_b}{C_{gb}} = \frac{l_2}{l_1}
 $$
@@ -295,17 +295,17 @@ General diagnostic signatures in Bode and Nyquist plots allow for rapid identifi
 
 ### Distribution of Relaxation Times (DRT)
 
-When multiple overlapping processes exist, DRT mathematically resolves them into distinct peaks. The integral transform relationship between the impedance $Z(\omega)$ and the distribution function $\gamma(\tau)$ is: 
+When multiple overlapping processes exist, DRT mathematically resolves them into distinct peaks. The integral transform relationship between the impedance $Z(\omega)$ and the distribution function $\gamma(\tau)$ is:
 $$
 Z(\omega) = R_0 + \int_{-\infty}^{\infty} \frac{\gamma(\tau)}{1 + j\omega\tau} d\ln\tau
 $$
 
 
-By separating the real and imaginary parts using the conjugate $1 - j\omega\tau$, the equations governing DRT evaluation become: 
+By separating the real and imaginary parts using the conjugate $1 - j\omega\tau$, the equations governing DRT evaluation become:
 $$
 Z'(\omega) = R_0 + \int_{-\infty}^{\infty} \frac{\gamma(\tau)}{1 + (\omega\tau)^2} d\ln\tau
 $$
- 
+
 $$
 Z''(\omega) = -\int_{-\infty}^{\infty} \frac{\omega\tau \cdot \gamma(\tau)}{1 + (\omega\tau)^2} d\ln\tau
 $$
@@ -317,7 +317,7 @@ $$
 
 2.  **Peak position ($\log \tau$):** Reflects the kinetics rate. Smaller $\tau$ (shifted to the left) means a faster reaction rate.
 
-3.  **Peak area:** Represents the polarization resistance $R_p$ of that process: 
+3.  **Peak area:** Represents the polarization resistance $R_p$ of that process:
 $$
 R_{p,i} = \int_{\text{Peak } i} \gamma(\tau) d\ln\tau \approx 2.303 \int_{\text{Peak } i} \gamma(\tau) d\log_{10}\tau
 $$
@@ -327,7 +327,7 @@ If peaks shift to the left and their area decreases with increasing temperature,
 
 ## Defect Chemistry of Electroceramics
 
-Defect chemistry describes how vacancies, interstitials, substituted dopants, electrons, and holes are created and annihilated in a crystal. In electroceramics, this is not a separate topic from impedance spectroscopy. The impedance spectrum measures the electrical response of charged species, and those charged species are exactly the defects described by defect chemistry. The logical chain is 
+Defect chemistry describes how vacancies, interstitials, substituted dopants, electrons, and holes are created and annihilated in a crystal. In electroceramics, this is not a separate topic from impedance spectroscopy. The impedance spectrum measures the electrical response of charged species, and those charged species are exactly the defects described by defect chemistry. The logical chain is
 $$
 \begin{aligned}
     \boxed{\text{processing atmosphere/composition}}
@@ -340,41 +340,70 @@ $$
 
 ### Kröger--Vink Notation
 
-A defect is written in the form 
+A defect is written in the form
 $$
 X_{\mathrm{site}}^{q},
 $$
- where $X$ is the species occupying a crystallographic site, "site" is the site being occupied, and $q$ is the *effective charge* relative to the perfect lattice. The symbols are 
+ where $X$ is the species occupying a crystallographic site, "site" is the site being occupied, and $q$ is the *effective charge* relative to the perfect lattice. The symbols are
 $$
 \times = 0, \qquad \bullet = +1, \qquad \bullet\bullet = +2, \qquad \prime=-1, \qquad \prime\prime=-2.
 $$
- The charge is not the absolute ionic charge. It is the difference between the charge of the defect and the charge expected for that lattice site in the ideal crystal [@Kroger1974; @Maier2004].
+ The charge is not the absolute ionic charge. It is the difference between the charge of the defect and the charge expected for that lattice site in the ideal crystal (Kroger1974; Maier2004).
 
-  **Symbol**                                           **Meaning**
-  ---------------------------------------------------- --------------------------------------------------------------------------------------------------------------
-  $\mathrm{O}_{\mathrm{O}}^{\times}$                   An oxygen ion on an oxygen site, with zero effective charge.
-  $V_{\mathrm{O}}^{\bullet\bullet}$                    An oxygen vacancy. Removing $\mathrm{O}^{2-}$ leaves an effective charge of $+2$.
-  $V_{\mathrm{A}}^{\prime}$                            An A-site vacancy in an alkali perovskite such as KNN, where the missing A-site ion has nominal charge $+1$.
-  $V_{\mathrm{Nb}}^{\prime\prime\prime\prime\prime}$   A niobium-site vacancy in KNN. Missing $\mathrm{Nb}^{5+}$ gives effective charge $-5$.
-  $e^{\prime}$                                         A conduction electron or a localized electron polaron, with effective charge $-1$.
-  $h^{\bullet}$                                        An electron hole or localized hole polaron, with effective charge $+1$.
-  $\mathrm{Nb}_{\mathrm{Nb}}^{\prime}$                 A reduced niobium center, commonly interpreted as $\mathrm{Nb}^{4+}$ on a $\mathrm{Nb}^{5+}$ site.
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$\mathrm{O}_{\mathrm{O}}^{\times}$</td>
+      <td>An oxygen ion on an oxygen site, with zero effective charge.</td>
+    </tr>
+    <tr>
+      <td>$V_{\mathrm{O}}^{\bullet\bullet}$</td>
+      <td>An oxygen vacancy. Removing $\mathrm{O}^{2-}$ leaves an effective charge of $+2$.</td>
+    </tr>
+    <tr>
+      <td>$V_{\mathrm{A}}^{\prime}$</td>
+      <td>An A-site vacancy in an alkali perovskite such as KNN, where the missing A-site ion has nominal charge $+1$.</td>
+    </tr>
+    <tr>
+      <td>$V_{\mathrm{Nb}}^{\prime\prime\prime\prime\prime}$</td>
+      <td>A niobium-site vacancy in KNN. Missing $\mathrm{Nb}^{5+}$ gives effective charge $-5$.</td>
+    </tr>
+    <tr>
+      <td>$e^{\prime}$</td>
+      <td>A conduction electron or a localized electron polaron, with effective charge $-1$.</td>
+    </tr>
+    <tr>
+      <td>$h^{\bullet}$</td>
+      <td>An electron hole or localized hole polaron, with effective charge $+1$.</td>
+    </tr>
+    <tr>
+      <td>$\mathrm{Nb}_{\mathrm{Nb}}^{\prime}$</td>
+      <td>A reduced niobium center, commonly interpreted as $\mathrm{Nb}^{4+}$ on a $\mathrm{Nb}^{5+}$ site.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Mass Action Law for Defect Reactions
 
-For a general defect reaction written as 
+For a general defect reaction written as
 $$
 \sum_i \nu_i A_i = 0,
 $$
- where $\nu_i>0$ for products and $\nu_i<0$ for reactants, the equilibrium constant is 
+ where $\nu_i>0$ for products and $\nu_i<0$ for reactants, the equilibrium constant is
 $$
 K = \prod_i a_i^{\nu_i}.
 $$
- For dilute defects, the activity $a_i$ is usually approximated by a normalized concentration. Therefore, for many practical derivations, 
+ For dilute defects, the activity $a_i$ is usually approximated by a normalized concentration. Therefore, for many practical derivations,
 $$
 a_i \approx \frac{[A_i]}{N_i},
 $$
- where $[A_i]$ is the concentration of species $A_i$ and $N_i$ is the number of available sites. If the number of regular lattice ions is much larger than the defect concentration, the activity of a normal lattice species such as $\mathrm{O}_{\mathrm{O}}^{\times}$ is approximately constant: 
+ where $[A_i]$ is the concentration of species $A_i$ and $N_i$ is the number of available sites. If the number of regular lattice ions is much larger than the defect concentration, the activity of a normal lattice species such as $\mathrm{O}_{\mathrm{O}}^{\times}$ is approximately constant:
 $$
 a_{\mathrm{O}_{\mathrm{O}}^{\times}} \approx 1.
 $$
@@ -384,26 +413,26 @@ $$
 
 Defect equilibria are not determined by mass action alone. Two additional constraints are required.
 
-**1. Charge neutrality.** A macroscopic crystal cannot carry a net charge. Therefore, 
+**1. Charge neutrality.** A macroscopic crystal cannot carry a net charge. Therefore,
 $$
 \sum_i z_i c_i = 0,
 $$
- where $z_i$ is the effective charge number and $c_i$ is the concentration of charged species $i$. For a reduced alkali niobate containing oxygen vacancies, A-site vacancies, electrons, and holes, a simplified electroneutrality relation is 
+ where $z_i$ is the effective charge number and $c_i$ is the concentration of charged species $i$. For a reduced alkali niobate containing oxygen vacancies, A-site vacancies, electrons, and holes, a simplified electroneutrality relation is
 $$
 2[V_{\mathrm{O}}^{\bullet\bullet}] + [h^{\bullet}]
     = [e^{\prime}] + [V_{\mathrm{A}}^{\prime}] + 5[V_{\mathrm{Nb}}^{\prime\prime\prime\prime\prime}] + \cdots.
 $$
  The dots denote additional acceptors, donors, or defect complexes. This equation is often the most important equation in defect chemistry because it tells which defects must appear together.
 
-**2. Site conservation.** The number of crystallographic sites is fixed. For the oxygen sublattice, 
+**2. Site conservation.** The number of crystallographic sites is fixed. For the oxygen sublattice,
 $$
 [\mathrm{O}_{\mathrm{O}}^{\times}] + [V_{\mathrm{O}}^{\bullet\bullet}] + [\mathrm{O}_{i}^{\prime\prime}] + \cdots = N_{\mathrm{O}},
 $$
- where $N_{\mathrm{O}}$ is the total concentration of oxygen sites. In the dilute limit, 
+ where $N_{\mathrm{O}}$ is the total concentration of oxygen sites. In the dilute limit,
 $$
 [V_{\mathrm{O}}^{\bullet\bullet}] \ll N_{\mathrm{O}}, \qquad [\mathrm{O}_{\mathrm{O}}^{\times}] \approx N_{\mathrm{O}}.
 $$
- For the A-site sublattice of KNN, 
+ For the A-site sublattice of KNN,
 $$
 [\mathrm{K}_{\mathrm{K}}^{\times}] + [\mathrm{Na}_{\mathrm{Na}}^{\times}] + [V_{\mathrm{A}}^{\prime}] + \cdots = N_{\mathrm{A}}.
 $$
@@ -411,28 +440,28 @@ $$
 
 ### Oxygen Vacancy Formation Under Reducing Conditions
 
-A standard oxygen-loss reaction in an oxide is 
+A standard oxygen-loss reaction in an oxide is
 $$
 \mathrm{O}_{\mathrm{O}}^{\times}\rightleftharpoons \frac{1}{2}\mathrm{O}_2(g) + V_{\mathrm{O}}^{\bullet\bullet}+ 2e^{\prime}.
 $$
- The mass action expression is 
+ The mass action expression is
 $$
 K_{\mathrm{red}}
     = \frac{a_{V_{\mathrm{O}}^{\bullet\bullet}}a_{e^{\prime}}^{2}p_{\mathrm{O}_2}^{1/2}}{a_{\mathrm{O}_{\mathrm{O}}^{\times}}}.
 $$
- Using $a_{\mathrm{O}_{\mathrm{O}}^{\times}}\approx 1$ and writing the defect activities as proportional to concentrations gives 
+ Using $a_{\mathrm{O}_{\mathrm{O}}^{\times}}\approx 1$ and writing the defect activities as proportional to concentrations gives
 $$
 K_{\mathrm{red}} \approx [V_{\mathrm{O}}^{\bullet\bullet}][e^{\prime}]^2p_{\mathrm{O}_2}^{1/2}.
 $$
- Rearranging gives 
+ Rearranging gives
 $$
 [V_{\mathrm{O}}^{\bullet\bullet}][e^{\prime}]^2 = K_{\mathrm{red}}p_{\mathrm{O}_2}^{-1/2}.
 $$
- If the only important charged defects are $V_{\mathrm{O}}^{\bullet\bullet}$ and $e^{\prime}$, charge neutrality requires 
+ If the only important charged defects are $V_{\mathrm{O}}^{\bullet\bullet}$ and $e^{\prime}$, charge neutrality requires
 $$
 2[V_{\mathrm{O}}^{\bullet\bullet}] = [e^{\prime}].
 $$
- Substitution gives 
+ Substitution gives
 $$
 \begin{aligned}
     [V_{\mathrm{O}}^{\bullet\bullet}][e^{\prime}]^2
@@ -441,23 +470,23 @@ $$
     &= 4[V_{\mathrm{O}}^{\bullet\bullet}]^3.
 \end{aligned}
 $$
- Therefore, 
+ Therefore,
 $$
 4[V_{\mathrm{O}}^{\bullet\bullet}]^3 = K_{\mathrm{red}}p_{\mathrm{O}_2}^{-1/2},
 $$
- so 
+ so
 $$
 [V_{\mathrm{O}}^{\bullet\bullet}]^3 = \frac{K_{\mathrm{red}}}{4}p_{\mathrm{O}_2}^{-1/2},
 $$
- which gives 
+ which gives
 $$
 [V_{\mathrm{O}}^{\bullet\bullet}] = \left(\frac{K_{\mathrm{red}}}{4}\right)^{1/3}p_{\mathrm{O}_2}^{-1/6}.
 $$
- Using $[e^{\prime}]=2[V_{\mathrm{O}}^{\bullet\bullet}]$, 
+ Using $[e^{\prime}]=2[V_{\mathrm{O}}^{\bullet\bullet}]$,
 $$
 [e^{\prime}] = 2\left(\frac{K_{\mathrm{red}}}{4}\right)^{1/3}p_{\mathrm{O}_2}^{-1/6}.
 $$
- If electron mobility is approximately independent of oxygen partial pressure, 
+ If electron mobility is approximately independent of oxygen partial pressure,
 $$
 \sigma_n = e\mu_n[e^{\prime}] \propto p_{\mathrm{O}_2}^{-1/6}.
 $$
@@ -465,28 +494,28 @@ $$
 
 ### Oxygen Incorporation and p-Type Conductivity Under Oxidizing Conditions
 
-The reverse oxygen incorporation reaction is 
+The reverse oxygen incorporation reaction is
 $$
 \frac{1}{2}\mathrm{O}_2(g) + V_{\mathrm{O}}^{\bullet\bullet}\rightleftharpoons \mathrm{O}_{\mathrm{O}}^{\times}+ 2h^{\bullet}.
 $$
- The equilibrium constant is 
+ The equilibrium constant is
 $$
 K_{\mathrm{ox}}
     = \frac{a_{\mathrm{O}_{\mathrm{O}}^{\times}}a_{h^{\bullet}}^{2}}{a_{V_{\mathrm{O}}^{\bullet\bullet}}p_{\mathrm{O}_2}^{1/2}}.
 $$
- Using $a_{\mathrm{O}_{\mathrm{O}}^{\times}}\approx 1$, 
+ Using $a_{\mathrm{O}_{\mathrm{O}}^{\times}}\approx 1$,
 $$
 K_{\mathrm{ox}} \approx \frac{[h^{\bullet}]^2}{[V_{\mathrm{O}}^{\bullet\bullet}]p_{\mathrm{O}_2}^{1/2}}.
 $$
- Rearranging, 
+ Rearranging,
 $$
 [h^{\bullet}]^2 = K_{\mathrm{ox}}[V_{\mathrm{O}}^{\bullet\bullet}]p_{\mathrm{O}_2}^{1/2}.
 $$
- If the oxygen vacancy concentration is fixed by acceptor dopants, then $[V_{\mathrm{O}}^{\bullet\bullet}]$ is approximately constant. Therefore, 
+ If the oxygen vacancy concentration is fixed by acceptor dopants, then $[V_{\mathrm{O}}^{\bullet\bullet}]$ is approximately constant. Therefore,
 $$
 [h^{\bullet}] = \left(K_{\mathrm{ox}}[V_{\mathrm{O}}^{\bullet\bullet}]\right)^{1/2}p_{\mathrm{O}_2}^{1/4}.
 $$
- The p-type electronic conductivity becomes 
+ The p-type electronic conductivity becomes
 $$
 \sigma_p = e\mu_p[h^{\bullet}] \propto p_{\mathrm{O}_2}^{1/4}.
 $$
@@ -494,27 +523,27 @@ $$
 
 ### Extrinsic Acceptor Compensation
 
-Consider an acceptor dopant $\mathrm{M}$ substituting on a B-site with one lower positive charge than the host B cation: 
+Consider an acceptor dopant $\mathrm{M}$ substituting on a B-site with one lower positive charge than the host B cation:
 $$
 \mathrm{M}_{\mathrm{B}}^{\prime}.
 $$
- A common compensation mechanism is oxygen-vacancy formation: 
+ A common compensation mechanism is oxygen-vacancy formation:
 $$
 2\mathrm{M}_{\mathrm{B}}^{\prime} + V_{\mathrm{O}}^{\bullet\bullet}\quad \text{is charge neutral.}
 $$
- The charge neutrality equation is 
+ The charge neutrality equation is
 $$
 2[V_{\mathrm{O}}^{\bullet\bullet}] + [h^{\bullet}] = [e^{\prime}] + [\mathrm{M}_{\mathrm{B}}^{\prime}].
 $$
- In the extrinsic ionic regime, electronic carriers are small compared with the dopant concentration: 
+ In the extrinsic ionic regime, electronic carriers are small compared with the dopant concentration:
 $$
 [h^{\bullet}] \ll [\mathrm{M}_{\mathrm{B}}^{\prime}], \qquad [e^{\prime}] \ll [\mathrm{M}_{\mathrm{B}}^{\prime}].
 $$
- Then 
+ Then
 $$
 2[V_{\mathrm{O}}^{\bullet\bullet}] \approx [\mathrm{M}_{\mathrm{B}}^{\prime}],
 $$
- so 
+ so
 $$
 [V_{\mathrm{O}}^{\bullet\bullet}] \approx \frac{[\mathrm{M}_{\mathrm{B}}^{\prime}]}{2}.
 $$
@@ -522,19 +551,19 @@ $$
 
 ### Intrinsic Schottky and Frenkel Defects
 
-For KNN-like alkali niobates, a full Schottky reaction can be written schematically as 
+For KNN-like alkali niobates, a full Schottky reaction can be written schematically as
 $$
 \varnothing \rightleftharpoons V_{\mathrm{A}}^{\prime}+ V_{\mathrm{Nb}}^{\prime\prime\prime\prime\prime}+ 3V_{\mathrm{O}}^{\bullet\bullet},
 $$
- where $\varnothing$ denotes a perfect-lattice reference state. The mass action expression is 
+ where $\varnothing$ denotes a perfect-lattice reference state. The mass action expression is
 $$
 K_{\mathrm{S}} = [V_{\mathrm{A}}^{\prime}][V_{\mathrm{Nb}}^{\prime\prime\prime\prime\prime}][V_{\mathrm{O}}^{\bullet\bullet}]^3.
 $$
- For an oxygen Frenkel pair, 
+ For an oxygen Frenkel pair,
 $$
 \mathrm{O}_{\mathrm{O}}^{\times}\rightleftharpoons V_{\mathrm{O}}^{\bullet\bullet}+ \mathrm{O}_{i}^{\prime\prime},
 $$
- so 
+ so
 $$
 K_{\mathrm{F}} = [V_{\mathrm{O}}^{\bullet\bullet}][\mathrm{O}_{i}^{\prime\prime}],
 $$
@@ -542,20 +571,20 @@ $$
 
 ### Defect Association and Trapping
 
-Mobile defects can be trapped by dopants, grain boundaries, charged domain walls, or other defects. For example, 
+Mobile defects can be trapped by dopants, grain boundaries, charged domain walls, or other defects. For example,
 $$
 \mathrm{M}_{\mathrm{B}}^{\prime} + V_{\mathrm{O}}^{\bullet\bullet}\rightleftharpoons (\mathrm{M}_{\mathrm{B}}^{\prime}-V_{\mathrm{O}}^{\bullet\bullet})^{\bullet}.
 $$
- The association constant is 
+ The association constant is
 $$
 K_{\mathrm{assoc}}
     = \frac{[(\mathrm{M}_{\mathrm{B}}^{\prime}-V_{\mathrm{O}}^{\bullet\bullet})^{\bullet}]}{[\mathrm{M}_{\mathrm{B}}^{\prime}][V_{\mathrm{O}}^{\bullet\bullet}]}.
 $$
- If only free oxygen vacancies contribute to long-range conduction, then the measured conductivity is controlled by 
+ If only free oxygen vacancies contribute to long-range conduction, then the measured conductivity is controlled by
 $$
 \sigma_{\mathrm{ion}} \propto [V_{\mathrm{O}}^{\bullet\bullet}]_{\mathrm{free}}D_{\mathrm{V}}.
 $$
- When the vacancy must first dissociate from a trap and then migrate, the apparent activation energy can become 
+ When the vacancy must first dissociate from a trap and then migrate, the apparent activation energy can become
 $$
 E_a^{\mathrm{app}} \approx \Delta H_{\mathrm{assoc}} + \Delta H_{m},
 $$
@@ -567,28 +596,28 @@ The Fermi level $E_F$ is the electron electrochemical potential expressed as an 
 
 ### Electron and Hole Concentrations
 
-For a non-degenerate semiconductor or insulator, the probability that an electronic state of energy $E$ is occupied is given by the Fermi--Dirac function 
+For a non-degenerate semiconductor or insulator, the probability that an electronic state of energy $E$ is occupied is given by the Fermi--Dirac function
 $$
 f(E)=\frac{1}{1+\exp\left(\frac{E-E_F}{k_{\mathrm{B}}T}\right)}.
 $$
- When $E-E_F \gg k_{\mathrm{B}}T$, the exponential term is much larger than 1, so 
+ When $E-E_F \gg k_{\mathrm{B}}T$, the exponential term is much larger than 1, so
 $$
 1+\exp\left(\frac{E-E_F}{k_{\mathrm{B}}T}\right)
     \approx \exp\left(\frac{E-E_F}{k_{\mathrm{B}}T}\right).
 $$
- Therefore, 
+ Therefore,
 $$
 f(E) \approx \exp\left(-\frac{E-E_F}{k_{\mathrm{B}}T}\right).
 $$
- Integrating over the conduction-band density of states gives 
+ Integrating over the conduction-band density of states gives
 $$
 n = N_C \exp\left(-\frac{E_C-E_F}{k_{\mathrm{B}}T}\right),
 $$
- where $N_C$ is the effective density of states and $E_C$ is the conduction-band edge. Similarly, the hole concentration is 
+ where $N_C$ is the effective density of states and $E_C$ is the conduction-band edge. Similarly, the hole concentration is
 $$
 p = N_V \exp\left(-\frac{E_F-E_V}{k_{\mathrm{B}}T}\right),
 $$
- where $N_V$ is the valence-band effective density of states and $E_V$ is the valence-band edge. Multiplying $n$ and $p$ gives 
+ where $N_V$ is the valence-band effective density of states and $E_V$ is the valence-band edge. Multiplying $n$ and $p$ gives
 $$
 \begin{aligned}
     np
@@ -607,42 +636,42 @@ $$
 
 ### Fermi-Level Dependence of Defect Formation Energy
 
-The formation free energy of a charged defect $D^q$ can be written schematically as [@Tuller2011; @Maier2004] 
+The formation free energy of a charged defect $D^q$ can be written schematically as (Tuller2011; Maier2004)
 $$
 \Delta G_f(D^q)
     = \Delta G_f^0(D^q;\{\mu_i\}) + q(E_F-E_V),
 $$
  where $q$ is the effective charge number, $\{\mu_i\}$ are the chemical potentials of atoms exchanged with reservoirs, and the valence-band edge $E_V$ is used as the energy reference. A positive defect becomes less favorable when $E_F$ increases, while a negative defect becomes more favorable when $E_F$ increases.
 
-The equilibrium concentration of that defect is 
+The equilibrium concentration of that defect is
 $$
 [D^q] = N_D g_q \exp\left[-\frac{\Delta G_f(D^q)}{k_{\mathrm{B}}T}\right],
 $$
- where $N_D$ is the number of available sites and $g_q$ is a degeneracy factor. Substituting the formation energy expression gives 
+ where $N_D$ is the number of available sites and $g_q$ is a degeneracy factor. Substituting the formation energy expression gives
 $$
 [D^q]
     = N_D g_q
     \exp\left[-\frac{\Delta G_f^0(D^q;\{\mu_i\})+q(E_F-E_V)}{k_{\mathrm{B}}T}\right].
 $$
- This can be separated into two factors: 
+ This can be separated into two factors:
 $$
 [D^q]
     = N_D g_q
     \exp\left[-\frac{\Delta G_f^0(D^q;\{\mu_i\})}{k_{\mathrm{B}}T}\right]
     \exp\left[-\frac{q(E_F-E_V)}{k_{\mathrm{B}}T}\right].
 $$
- Taking the logarithm gives 
+ Taking the logarithm gives
 $$
 \ln[D^q]
     = \ln(N_Dg_q)
     -\frac{\Delta G_f^0(D^q;\{\mu_i\})}{k_{\mathrm{B}}T}
     -\frac{q(E_F-E_V)}{k_{\mathrm{B}}T}.
 $$
- Therefore, 
+ Therefore,
 $$
 \frac{\partial\ln[D^q]}{\partial E_F} = -\frac{q}{k_{\mathrm{B}}T}.
 $$
- For an oxygen vacancy $V_{\mathrm{O}}^{\bullet\bullet}$ with $q=+2$, 
+ For an oxygen vacancy $V_{\mathrm{O}}^{\bullet\bullet}$ with $q=+2$,
 $$
 \frac{\partial\ln[V_{\mathrm{O}}^{\bullet\bullet}]}{\partial E_F} = -\frac{2}{k_{\mathrm{B}}T}.
 $$
@@ -650,17 +679,17 @@ $$
 
 ### Charge Neutrality Determines the Fermi Level
 
-The Fermi level is not arbitrary. It is fixed by charge neutrality: 
+The Fermi level is not arbitrary. It is fixed by charge neutrality:
 $$
 p(E_F,T)-n(E_F,T)+\sum_j q_j[D_j^{q_j}](E_F,T)=0.
 $$
- This equation contains the electronic carrier concentrations and all charged defects. Substituting the non-degenerate carrier formulas gives 
+ This equation contains the electronic carrier concentrations and all charged defects. Substituting the non-degenerate carrier formulas gives
 $$
 N_V\exp\left(-\frac{E_F-E_V}{k_{\mathrm{B}}T}\right)
     -N_C\exp\left(-\frac{E_C-E_F}{k_{\mathrm{B}}T}\right)
     +\sum_j q_j[D_j^{q_j}](E_F,T)=0.
 $$
- Because each $[D_j^{q_j}]$ can also depend on $E_F$, this equation must usually be solved self-consistently. Conceptually, the solution proceeds as follows: 
+ Because each $[D_j^{q_j}]$ can also depend on $E_F$, this equation must usually be solved self-consistently. Conceptually, the solution proceeds as follows:
 $$
 \begin{aligned}
     &\text{choose } T,\;p_{\mathrm{O}_2},\;\text{composition}, \\
@@ -675,15 +704,15 @@ $$
 
 ### Defect Charge-State Transitions
 
-A defect may have more than one charge state. For electron capture, 
+A defect may have more than one charge state. For electron capture,
 $$
 D^q + e^{\prime}\rightleftharpoons D^{q-1}.
 $$
- The transition level $E_t(q/q-1)$ is the Fermi level at which the two charge states have equal formation free energy: 
+ The transition level $E_t(q/q-1)$ is the Fermi level at which the two charge states have equal formation free energy:
 $$
 \Delta G_f(D^q;E_F=E_t)=\Delta G_f(D^{q-1};E_F=E_t).
 $$
- Ignoring degeneracy factors for clarity, the concentration ratio is 
+ Ignoring degeneracy factors for clarity, the concentration ratio is
 $$
 \frac{[D^{q-1}]}{[D^q]}
     = \exp\left(\frac{E_F-E_t(q/q-1)}{k_{\mathrm{B}}T}\right).
@@ -694,13 +723,13 @@ $$
 
 - if $E_F<E_t$, the more oxidized state $D^q$ is favored.
 
-This is important for oxides such as niobates because electrons can localize on transition-metal cations: 
+This is important for oxides such as niobates because electrons can localize on transition-metal cations:
 $$
 \mathrm{Nb}_{\mathrm{Nb}}^{\times}+e^{\prime}
     \rightleftharpoons
     \mathrm{Nb}_{\mathrm{Nb}}^{\prime}.
 $$
- The species $\mathrm{Nb}_{\mathrm{Nb}}^{\prime}$ is a reduced niobium center, often described as a small electron polaron. Small-polaron hopping can then be represented as 
+ The species $\mathrm{Nb}_{\mathrm{Nb}}^{\prime}$ is a reduced niobium center, often described as a small electron polaron. Small-polaron hopping can then be represented as
 $$
 \mathrm{Nb}_{\mathrm{Nb}}^{\prime} + \mathrm{Nb}_{\mathrm{Nb}}^{\times}
     \rightleftharpoons
@@ -710,23 +739,23 @@ $$
 
 ### Fermi Level and Apparent Activation Energy
 
-For band-like electron conduction, 
+For band-like electron conduction,
 $$
 \sigma_e=e\mu_e n.
 $$
- Substituting 
+ Substituting
 $$
 n=N_C\exp\left(-\frac{E_C-E_F}{k_{\mathrm{B}}T}\right)
 $$
- gives 
+ gives
 $$
 \sigma_e=e\mu_e N_C\exp\left(-\frac{E_C-E_F}{k_{\mathrm{B}}T}\right).
 $$
- For small-polaron hopping, the mobility is often written as 
+ For small-polaron hopping, the mobility is often written as
 $$
 \mu_e = \mu_0 T^{-s}\exp\left(-\frac{H_{\mathrm{hop}}}{k_{\mathrm{B}}T}\right),
 $$
- where $s=1$ is common for adiabatic hopping and the exact prefactor can depend on the hopping model. Therefore, 
+ where $s=1$ is common for adiabatic hopping and the exact prefactor can depend on the hopping model. Therefore,
 $$
 \begin{aligned}
     \sigma_e
@@ -737,37 +766,37 @@ $$
     \exp\left[-\frac{(E_C-E_F)+H_{\mathrm{hop}}}{k_{\mathrm{B}}T}\right].
 \end{aligned}
 $$
- Multiplying by $T^s$ gives 
+ Multiplying by $T^s$ gives
 $$
 \sigma_eT^s=eN_C\mu_0
     \exp\left[-\frac{(E_C-E_F)+H_{\mathrm{hop}}}{k_{\mathrm{B}}T}\right].
 $$
- If $E_F$ is approximately temperature-independent over the fitted range, then an Arrhenius plot of $\ln(\sigma_eT^s)$ versus $1/T$ gives 
+ If $E_F$ is approximately temperature-independent over the fitted range, then an Arrhenius plot of $\ln(\sigma_eT^s)$ versus $1/T$ gives
 $$
 E_a \approx (E_C-E_F)+H_{\mathrm{hop}}.
 $$
- If $E_F$ changes with temperature, the apparent activation energy is more accurately obtained from the slope definition 
+ If $E_F$ changes with temperature, the apparent activation energy is more accurately obtained from the slope definition
 $$
 E_a^{\mathrm{app}}
     = -k_{\mathrm{B}}\frac{d\ln(\sigma_eT^s)}{d(1/T)}.
 $$
- Let 
+ Let
 $$
 A(T)=(E_C-E_F)+H_{\mathrm{hop}}.
 $$
- Then 
+ Then
 $$
 \ln(\sigma_eT^s)=\ln(eN_C\mu_0)-\frac{A(T)}{k_{\mathrm{B}}T}.
 $$
- Set 
+ Set
 $$
 x=\frac{1}{T}.
 $$
- Then 
+ Then
 $$
 \ln(\sigma_eT^s)=\ln(eN_C\mu_0)-\frac{A(x)x}{k_{\mathrm{B}}}.
 $$
- Differentiate with respect to $x$: 
+ Differentiate with respect to $x$:
 $$
 \begin{aligned}
     \frac{d\ln(\sigma_eT^s)}{dx}
@@ -775,12 +804,12 @@ $$
     &= -\frac{1}{k_{\mathrm{B}}}\left(A(x)+x\frac{dA}{dx}\right).
 \end{aligned}
 $$
- Therefore, 
+ Therefore,
 $$
 E_a^{\mathrm{app}}
     = A(x)+x\frac{dA}{dx}.
 $$
- Because $x=1/T$, one has $x(dA/dx)=-T(dA/dT)$. Thus, 
+ Because $x=1/T$, one has $x(dA/dx)=-T(dA/dT)$. Thus,
 $$
 E_a^{\mathrm{app}}
     = A(T)-T\frac{dA}{dT}.
@@ -793,31 +822,31 @@ This section gives the central mathematical bridge: point defects determine cond
 
 ### From Defect Concentration to Conductivity
 
-For a charged carrier $i$ with charge number $z_i$, concentration $c_i$, diffusion coefficient $D_i$, and mobility $\mu_i$, the drift current density is 
+For a charged carrier $i$ with charge number $z_i$, concentration $c_i$, diffusion coefficient $D_i$, and mobility $\mu_i$, the drift current density is
 $$
 J_i = q_i c_i v_i,
 $$
- where 
+ where
 $$
 q_i=z_ie
 $$
- and $v_i$ is the drift velocity. Under a small electric field $E$, 
+ and $v_i$ is the drift velocity. Under a small electric field $E$,
 $$
 |v_i|=\mu_i |E|.
 $$
- The magnitude of the current density is therefore 
+ The magnitude of the current density is therefore
 $$
 |J_i|=|q_i|c_i|v_i|=|z_i|e c_i\mu_i |E|.
 $$
- Since $|J_i|=\sigma_i|E|$, 
+ Since $|J_i|=\sigma_i|E|$,
 $$
 \sigma_i=|z_i|e c_i\mu_i.
 $$
- The Nernst--Einstein relation connects mobility and diffusion: 
+ The Nernst--Einstein relation connects mobility and diffusion:
 $$
 \mu_i=\frac{|z_i|eD_i}{k_{\mathrm{B}}T}.
 $$
- Therefore, the partial conductivity is 
+ Therefore, the partial conductivity is
 $$
 \begin{aligned}
     \sigma_i
@@ -826,7 +855,7 @@ $$
     &= \frac{z_i^2e^2c_iD_i}{k_{\mathrm{B}}T}.
 \end{aligned}
 $$
- For multiple carriers, 
+ For multiple carriers,
 $$
 \sigma = \sum_i \sigma_i
     = \sum_i \frac{z_i^2e^2c_iD_i}{k_{\mathrm{B}}T}.
@@ -835,19 +864,19 @@ $$
 
 ### From Conductivity to Measured Resistance
 
-For a homogeneous slab of thickness $L$ and electrode area $A$, Ohm's law gives 
+For a homogeneous slab of thickness $L$ and electrode area $A$, Ohm's law gives
 $$
 R=\rho\frac{L}{A},
 $$
- where $\rho$ is resistivity. Since 
+ where $\rho$ is resistivity. Since
 $$
 \rho=\frac{1}{\sigma},
 $$
- we obtain 
+ we obtain
 $$
 R=\frac{L}{A\sigma}.
 $$
- Substituting the Nernst--Einstein expression for $\sigma$ gives 
+ Substituting the Nernst--Einstein expression for $\sigma$ gives
 $$
 R=\frac{L}{A\displaystyle\sum_i \frac{z_i^2e^2c_iD_i}{k_{\mathrm{B}}T}}.
 $$
@@ -855,11 +884,11 @@ $$
 
 ### From Resistance and Permittivity to Relaxation Time
 
-The capacitance of the same slab is 
+The capacitance of the same slab is
 $$
 C=\epsilon_0\epsilon_r\frac{A}{L}.
 $$
- The RC time constant is 
+ The RC time constant is
 $$
 \begin{aligned}
     \tau
@@ -868,25 +897,25 @@ $$
     &=\frac{\epsilon_0\epsilon_r}{\sigma}.
 \end{aligned}
 $$
- This is the Maxwell relaxation time: 
+ This is the Maxwell relaxation time:
 $$
 \boxed{\tau_M=\frac{\epsilon_0\epsilon_r}{\sigma}}.
 $$
- The peak frequency for an ideal parallel RC element is 
+ The peak frequency for an ideal parallel RC element is
 $$
 \omega_{\mathrm{max}}=\frac{1}{RC}=\frac{1}{\tau_M}.
 $$
- Therefore, 
+ Therefore,
 $$
 f_{\mathrm{max}}=\frac{1}{2\pi\tau_M}=\frac{\sigma}{2\pi\epsilon_0\epsilon_r}.
 $$
- Substituting the defect-controlled conductivity gives 
+ Substituting the defect-controlled conductivity gives
 $$
 f_{\mathrm{max}}
     =\frac{1}{2\pi\epsilon_0\epsilon_r}
     \sum_i \frac{z_i^2e^2c_iD_i}{k_{\mathrm{B}}T}.
 $$
- This is the most compact mathematical bridge between defect chemistry and impedance spectroscopy: 
+ This is the most compact mathematical bridge between defect chemistry and impedance spectroscopy:
 $$
 \boxed{c_i,D_i \longrightarrow \sigma \longrightarrow R,\tau,f_{\mathrm{max}} \longrightarrow Z^*(\omega).}
 $$
@@ -894,31 +923,31 @@ $$
 
 ### Full Impedance of Multiple Defect-Controlled Regions
 
-A polycrystalline electroceramic usually contains grains, grain boundaries, and electrode interfaces. A common series representation is 
+A polycrystalline electroceramic usually contains grains, grain boundaries, and electrode interfaces. A common series representation is
 $$
 Z^*(\omega)=R_s+\sum_{r}\frac{R_r}{1+j\omega R_rC_r}+Z_{\mathrm{electrode}}(\omega),
 $$
- where $r$ can represent bulk, grain boundary, or a surface layer. For each region, 
+ where $r$ can represent bulk, grain boundary, or a surface layer. For each region,
 $$
 R_r=\frac{L_r}{A_r\sigma_r}
 $$
- and 
+ and
 $$
 C_r=\epsilon_0\epsilon_{r}\frac{A_r}{L_r}.
 $$
- Thus, 
+ Thus,
 $$
 \tau_r=R_rC_r=\frac{\epsilon_0\epsilon_r}{\sigma_r}.
 $$
- If a grain boundary has a lower mobile-defect concentration or a higher migration barrier than the grain interior, then 
+ If a grain boundary has a lower mobile-defect concentration or a higher migration barrier than the grain interior, then
 $$
 \sigma_{gb}<\sigma_b,
 $$
- so 
+ so
 $$
 R_{gb}>R_b
 $$
- and 
+ and
 $$
 \tau_{gb}=R_{gb}C_{gb}
 $$
@@ -926,15 +955,15 @@ $$
 
 ### Capacitance as a Microstructural Fingerprint
 
-For a grain of characteristic thickness $d_g$ and a grain-boundary layer of thickness $\delta_{gb}$, 
+For a grain of characteristic thickness $d_g$ and a grain-boundary layer of thickness $\delta_{gb}$,
 $$
 C_b=\epsilon_0\epsilon_b\frac{A}{d_g}
 $$
- whereas 
+ whereas
 $$
 C_{gb}=\epsilon_0\epsilon_{gb}\frac{A}{\delta_{gb}}.
 $$
- Taking the ratio, 
+ Taking the ratio,
 $$
 \begin{aligned}
     \frac{C_b}{C_{gb}}
@@ -942,45 +971,45 @@ $$
     &=\frac{\epsilon_b}{\epsilon_{gb}}\frac{\delta_{gb}}{d_g}.
 \end{aligned}
 $$
- Therefore, 
+ Therefore,
 $$
 \frac{\delta_{gb}}{d_g}=\frac{\epsilon_{gb}}{\epsilon_b}\frac{C_b}{C_{gb}}.
 $$
- If $\epsilon_{gb}\approx\epsilon_b$, then 
+ If $\epsilon_{gb}\approx\epsilon_b$, then
 $$
 \frac{\delta_{gb}}{d_g}\approx\frac{C_b}{C_{gb}}.
 $$
  Because grain boundaries are much thinner than grains, $C_{gb}$ is usually much larger than $C_b$. This is why capacitance helps assign arcs: the resistance gives the transport difficulty, while the capacitance gives the geometric or microstructural origin of the response.
 
-Approximate capacitance ranges often used for ceramic assignment are 
+Approximate capacitance ranges often used for ceramic assignment are
 $$
 C_b\sim 10^{-12}\text{--}10^{-11}\,\mathrm{F},
 $$
- 
+
 $$
 C_{gb}\sim 10^{-10}\text{--}10^{-8}\,\mathrm{F},
 $$
- 
+
 $$
 C_{el}\sim 10^{-7}\text{--}10^{-4}\,\mathrm{F}.
 $$
- These values are geometry-dependent and should not be used alone. The best assignment uses capacitance, activation energy, atmosphere dependence, and microstructural evidence together [@Irvine1990; @Macdonald1987; @Barsoukov2005].
+ These values are geometry-dependent and should not be used alone. The best assignment uses capacitance, activation energy, atmosphere dependence, and microstructural evidence together (Irvine1990; Macdonald1987; Barsoukov2005).
 
 ### Worked Bridge Example: Oxygen Vacancy Formation to a Nyquist Arc
 
-Start from the reducing reaction 
+Start from the reducing reaction
 $$
 \mathrm{O}_{\mathrm{O}}^{\times}\rightleftharpoons \frac{1}{2}\mathrm{O}_2(g)+V_{\mathrm{O}}^{\bullet\bullet}+2e^{\prime}.
 $$
- As shown earlier, 
+ As shown earlier,
 $$
 [e^{\prime}] \propto p_{\mathrm{O}_2}^{-1/6}.
 $$
- Assume the measured bulk conductivity is dominated by electron polarons with mobility 
+ Assume the measured bulk conductivity is dominated by electron polarons with mobility
 $$
 \mu_e=\mu_0T^{-s}\exp\left(-\frac{H_{\mathrm{hop}}}{k_{\mathrm{B}}T}\right).
 $$
- Then 
+ Then
 $$
 \begin{aligned}
     \sigma_b
@@ -988,23 +1017,23 @@ $$
     &\propto e\mu_0T^{-s}\exp\left(-\frac{H_{\mathrm{hop}}}{k_{\mathrm{B}}T}\right)p_{\mathrm{O}_2}^{-1/6}.
 \end{aligned}
 $$
- The bulk resistance is 
+ The bulk resistance is
 $$
 R_b=\frac{L}{A\sigma_b}.
 $$
- Therefore, 
+ Therefore,
 $$
 R_b \propto T^{s}\exp\left(\frac{H_{\mathrm{hop}}}{k_{\mathrm{B}}T}\right)p_{\mathrm{O}_2}^{1/6}.
 $$
- The ideal bulk impedance is 
+ The ideal bulk impedance is
 $$
 Z_b^*(\omega)=\frac{R_b}{1+j\omega R_bC_b}.
 $$
- Its peak frequency is 
+ Its peak frequency is
 $$
 f_{\mathrm{max},b}=\frac{1}{2\pi R_bC_b}.
 $$
- Because $R_b\propto p_{\mathrm{O}_2}^{1/6}$, 
+ Because $R_b\propto p_{\mathrm{O}_2}^{1/6}$,
 $$
 f_{\mathrm{max},b}\propto p_{\mathrm{O}_2}^{-1/6}
 $$
@@ -1024,19 +1053,19 @@ This is the requested bridge between defect chemistry and impedance spectroscopy
 
 ### Worked Bridge Example: Extrinsic Oxygen-Ion Conduction
 
-For acceptor-controlled oxygen-vacancy conduction, 
+For acceptor-controlled oxygen-vacancy conduction,
 $$
 [V_{\mathrm{O}}^{\bullet\bullet}]\approx\frac{[\mathrm{M}_{\mathrm{B}}^{\prime}]}{2}.
 $$
- The oxygen vacancy has charge number $z=+2$, so its partial ionic conductivity is 
+ The oxygen vacancy has charge number $z=+2$, so its partial ionic conductivity is
 $$
 \sigma_{V_O}=\frac{(2)^2e^2[V_{\mathrm{O}}^{\bullet\bullet}]D_V}{k_{\mathrm{B}}T}.
 $$
- The vacancy diffusion coefficient is 
+ The vacancy diffusion coefficient is
 $$
 D_V=D_0\exp\left(-\frac{\Delta H_m}{k_{\mathrm{B}}T}\right).
 $$
- Substituting gives 
+ Substituting gives
 $$
 \begin{aligned}
     \sigma_{V_O}
@@ -1048,23 +1077,23 @@ $$
     \exp\left(-\frac{\Delta H_m}{k_{\mathrm{B}}T}\right).
 \end{aligned}
 $$
- Multiplying by $T$, 
+ Multiplying by $T$,
 $$
 \sigma_{V_O}T
     =\frac{2e^2D_0[\mathrm{M}_{\mathrm{B}}^{\prime}]}{k_{\mathrm{B}}}
     \exp\left(-\frac{\Delta H_m}{k_{\mathrm{B}}T}\right).
 $$
- Taking the natural logarithm, 
+ Taking the natural logarithm,
 $$
 \ln(\sigma_{V_O}T)
     =\ln\left(\frac{2e^2D_0[\mathrm{M}_{\mathrm{B}}^{\prime}]}{k_{\mathrm{B}}}\right)
     -\frac{\Delta H_m}{k_{\mathrm{B}}}\frac{1}{T}.
 $$
- Therefore, the slope of $\ln(\sigma T)$ versus $1/T$ is 
+ Therefore, the slope of $\ln(\sigma T)$ versus $1/T$ is
 $$
 m=-\frac{\Delta H_m}{k_{\mathrm{B}}}
 $$
- and 
+ and
 $$
 \Delta H_m=-mk_{\mathrm{B}}.
 $$
@@ -1072,29 +1101,29 @@ $$
 
 ### Space-Charge Layers and Grain-Boundary Impedance
 
-Charged defects can segregate to grain boundaries and create a space-charge potential. This produces grain-boundary arcs in impedance spectra. The electrostatic potential $\phi(x)$ satisfies Poisson's equation: 
+Charged defects can segregate to grain boundaries and create a space-charge potential. This produces grain-boundary arcs in impedance spectra. The electrostatic potential $\phi(x)$ satisfies Poisson's equation:
 $$
 \frac{d^2\phi}{dx^2}=-\frac{\rho(x)}{\epsilon_0\epsilon_r},
 $$
- where the local charge density is 
+ where the local charge density is
 $$
 \rho(x)=e\sum_i z_i\left[c_i(x)-c_{i,\infty}\right].
 $$
- For small potentials, the Boltzmann distribution gives 
+ For small potentials, the Boltzmann distribution gives
 $$
 c_i(x)=c_{i,\infty}\exp\left(-\frac{z_ie\phi(x)}{k_{\mathrm{B}}T}\right).
 $$
- If $|z_ie\phi|\ll k_{\mathrm{B}}T$, then 
+ If $|z_ie\phi|\ll k_{\mathrm{B}}T$, then
 $$
 \exp\left(-\frac{z_ie\phi}{k_{\mathrm{B}}T}\right)
     \approx 1-\frac{z_ie\phi}{k_{\mathrm{B}}T}.
 $$
- Therefore, 
+ Therefore,
 $$
 c_i(x)-c_{i,\infty}
     \approx -c_{i,\infty}\frac{z_ie\phi}{k_{\mathrm{B}}T}.
 $$
- Substituting into the charge density gives 
+ Substituting into the charge density gives
 $$
 \begin{aligned}
     \rho(x)
@@ -1102,7 +1131,7 @@ $$
     &=-\frac{e^2\phi}{k_{\mathrm{B}}T}\sum_i z_i^2c_{i,\infty}.
 \end{aligned}
 $$
- Poisson's equation becomes 
+ Poisson's equation becomes
 $$
 \begin{aligned}
     \frac{d^2\phi}{dx^2}
@@ -1110,27 +1139,27 @@ $$
     &=\frac{e^2}{\epsilon_0\epsilon_rk_{\mathrm{B}}T}\left(\sum_i z_i^2c_{i,\infty}\right)\phi.
 \end{aligned}
 $$
- Define the Debye length 
+ Define the Debye length
 $$
 L_D=\left(\frac{\epsilon_0\epsilon_rk_{\mathrm{B}}T}{e^2\sum_i z_i^2c_{i,\infty}}\right)^{1/2}.
 $$
- Then 
+ Then
 $$
 \frac{d^2\phi}{dx^2}=\frac{\phi}{L_D^2}.
 $$
- A solution decaying away from the grain boundary is 
+ A solution decaying away from the grain boundary is
 $$
 \phi(x)=\phi_0\exp\left(-\frac{x}{L_D}\right).
 $$
- The corresponding space-charge capacitance per unit area is approximately 
+ The corresponding space-charge capacitance per unit area is approximately
 $$
 \frac{C_{sc}}{A}\approx\frac{\epsilon_0\epsilon_r}{L_D}.
 $$
- If the mobile carrier must cross a grain-boundary barrier of height $\Delta\phi$, its conductivity is approximately 
+ If the mobile carrier must cross a grain-boundary barrier of height $\Delta\phi$, its conductivity is approximately
 $$
 \sigma_{gb}\approx\sigma_b\exp\left(-\frac{|z_m|e\Delta\phi}{k_{\mathrm{B}}T}\right),
 $$
- where $z_m$ is the charge number of the mobile carrier. Therefore, 
+ where $z_m$ is the charge number of the mobile carrier. Therefore,
 $$
 R_{gb}\propto\exp\left(\frac{|z_m|e\Delta\phi}{k_{\mathrm{B}}T}\right).
 $$
@@ -1138,29 +1167,29 @@ $$
 
 ### Chemical Capacitance: Charge Storage by Changing Defect Concentration
 
-Not all capacitance is purely geometric. In mixed ionic-electronic conductors, charge can also be stored by changing the concentration of mobile carriers or defects. This is called chemical capacitance [@Jamnik1999].
+Not all capacitance is purely geometric. In mixed ionic-electronic conductors, charge can also be stored by changing the concentration of mobile carriers or defects. This is called chemical capacitance (Jamnik1999).
 
-For a carrier with charge $q_i=z_ie$ in volume $V$, the stored charge is 
+For a carrier with charge $q_i=z_ie$ in volume $V$, the stored charge is
 $$
 Q_i=q_iVc_i.
 $$
- The chemical capacitance is the derivative of stored charge with respect to electrochemical potential: 
+ The chemical capacitance is the derivative of stored charge with respect to electrochemical potential:
 $$
 C_{\mathrm{chem},i}=\frac{dQ_i}{d\tilde{\mu}_i/q_i}.
 $$
- For an ideal dilute species, 
+ For an ideal dilute species,
 $$
 \tilde{\mu}_i=\tilde{\mu}_i^0+k_{\mathrm{B}}T\ln c_i.
 $$
- Then 
+ Then
 $$
 \frac{d\tilde{\mu}_i}{dc_i}=\frac{k_{\mathrm{B}}T}{c_i}.
 $$
- Also, 
+ Also,
 $$
 \frac{dQ_i}{dc_i}=q_iV.
 $$
- Therefore, 
+ Therefore,
 $$
 \begin{aligned}
     C_{\mathrm{chem},i}
@@ -1176,19 +1205,19 @@ $$
 
 ### Blocking Electrodes, Diffusion, and Warburg Behavior
 
-When electrodes block ionic transfer, mobile ions or vacancies accumulate near the electrode at low frequency. The flux of an ionic defect follows the Nernst--Planck equation: 
+When electrodes block ionic transfer, mobile ions or vacancies accumulate near the electrode at low frequency. The flux of an ionic defect follows the Nernst--Planck equation:
 $$
 J_i=-D_i\frac{dc_i}{dx}-\frac{z_ieD_i}{k_{\mathrm{B}}T}c_i\frac{d\phi}{dx}.
 $$
- The first term is diffusion due to a concentration gradient; the second term is migration due to an electric-potential gradient. For semi-infinite diffusion, the impedance has the Warburg form 
+ The first term is diffusion due to a concentration gradient; the second term is migration due to an electric-potential gradient. For semi-infinite diffusion, the impedance has the Warburg form
 $$
 Z_W=\frac{A_W}{\sqrt{\omega}}(1-j),
 $$
- which gives a $45^{\circ}$ line in a Nyquist plot. For finite-length diffusion, a common expression is 
+ which gives a $45^{\circ}$ line in a Nyquist plot. For finite-length diffusion, a common expression is
 $$
 Z_{\mathrm{FLW}}=R_D\frac{\tanh\left[(j\omega\tau_D)^{1/2}\right]}{(j\omega\tau_D)^{1/2}},
 $$
- where 
+ where
 $$
 \tau_D=\frac{L_D^{*2}}{D_i}.
 $$
@@ -1196,32 +1225,32 @@ $$
 
 ### CPE Parameters as Defect-Disorder Indicators
 
-Real ceramics often show depressed semicircles. The parallel $R$--CPE element has admittance 
+Real ceramics often show depressed semicircles. The parallel $R$--CPE element has admittance
 $$
 Y^*=\frac{1}{R}+Q(j\omega)^n.
 $$
- Using 
+ Using
 $$
 (j\omega)^n=\omega^n\left[\cos\left(\frac{n\pi}{2}\right)+j\sin\left(\frac{n\pi}{2}\right)\right],
 $$
- write 
+ write
 $$
 G=\frac{1}{R}, \qquad A=Q\omega^n, \qquad \theta=\frac{n\pi}{2}.
 $$
- Then 
+ Then
 $$
 Y^*=G+A\cos\theta+jA\sin\theta.
 $$
- The impedance is 
+ The impedance is
 $$
 Z^*=\frac{1}{Y^*}
     =\frac{G+A\cos\theta-jA\sin\theta}{(G+A\cos\theta)^2+(A\sin\theta)^2}.
 $$
- Therefore, 
+ Therefore,
 $$
 -Z''=\frac{A\sin\theta}{G^2+2GA\cos\theta+A^2}.
 $$
- To find the peak, differentiate with respect to $A$: 
+ To find the peak, differentiate with respect to $A$:
 $$
 \begin{aligned}
     \frac{d(-Z'')}{dA}
@@ -1229,27 +1258,27 @@ $$
     &=\frac{\sin\theta(G^2-A^2)}{(G^2+2GA\cos\theta+A^2)^2}.
 \end{aligned}
 $$
- The peak occurs when 
+ The peak occurs when
 $$
 G^2-A^2=0,
 $$
- so 
+ so
 $$
 A=G.
 $$
- Using $A=Q\omega^n$ and $G=1/R$, 
+ Using $A=Q\omega^n$ and $G=1/R$,
 $$
 Q\omega_{\mathrm{max}}^n=\frac{1}{R}.
 $$
- Therefore, 
+ Therefore,
 $$
 \omega_{\mathrm{max}}=\left(\frac{1}{RQ}\right)^{1/n}
 $$
- and 
+ and
 $$
 f_{\mathrm{max}}=\frac{1}{2\pi}\left(\frac{1}{RQ}\right)^{1/n}.
 $$
- An effective capacitance can be defined from $C_{\mathrm{eff}}=1/(R\omega_{\mathrm{max}})$: 
+ An effective capacitance can be defined from $C_{\mathrm{eff}}=1/(R\omega_{\mathrm{max}})$:
 $$
 \begin{aligned}
     C_{\mathrm{eff}}
@@ -1258,28 +1287,53 @@ $$
     &=\left(QR^{1-n}\right)^{1/n}.
 \end{aligned}
 $$
- Values of $n<1$ commonly indicate a distribution of relaxation times caused by microstructural disorder, composition gradients, surface roughness, or a distribution of defect environments [@Jonscher1983; @Barsoukov2005].
+ Values of $n<1$ commonly indicate a distribution of relaxation times caused by microstructural disorder, composition gradients, surface roughness, or a distribution of defect environments (Jonscher1983; Barsoukov2005).
 
 ### Atmosphere-Dependent Impedance as a Defect Diagnostic
 
-A useful experimental strategy is to measure impedance as a function of oxygen partial pressure. If the fitted bulk resistance is converted to bulk conductivity, 
+A useful experimental strategy is to measure impedance as a function of oxygen partial pressure. If the fitted bulk resistance is converted to bulk conductivity,
 $$
 \sigma_b=\frac{L}{AR_b},
 $$
- then the slope 
+ then the slope
 $$
 m=\frac{d\log\sigma_b}{d\log p_{\mathrm{O}_2}}
 $$
  can be compared with defect-chemistry predictions.
 
-  **Dominant regime**                                           **Typical dependence**                         **Interpretation**
-  ------------------------------------------------------------- ---------------------------------------------- --------------------------------------------------------------------------------------
-  Reduction-controlled electrons from oxygen loss               $\sigma\propto p_{\mathrm{O}_2}^{-1/6}$        n-type electronic conduction coupled to $V_{\mathrm{O}}^{\bullet\bullet}$ formation.
-  Acceptor-controlled oxygen vacancies                          $\sigma\propto p_{\mathrm{O}_2}^0$             Extrinsic ionic conduction; vacancy concentration fixed by dopant/stoichiometry.
-  Oxidation-controlled holes with fixed vacancy concentration   $\sigma\propto p_{\mathrm{O}_2}^{1/4}$         p-type conduction.
-  Strong blocking electrode polarization                        low-frequency capacitance increases strongly   Ionic accumulation at electrodes, not necessarily bulk conduction.
+<table>
+  <thead>
+    <tr>
+      <th>Dominant regime</th>
+      <th>Typical dependence</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Reduction-controlled electrons from oxygen loss</td>
+      <td>$\sigma\propto p_{\mathrm{O}_2}^{-1/6}$</td>
+      <td>n-type electronic conduction coupled to $V_{\mathrm{O}}^{\bullet\bullet}$ formation.</td>
+    </tr>
+    <tr>
+      <td>Acceptor-controlled oxygen vacancies</td>
+      <td>$\sigma\propto p_{\mathrm{O}_2}^0$</td>
+      <td>Extrinsic ionic conduction; vacancy concentration fixed by dopant/stoichiometry.</td>
+    </tr>
+    <tr>
+      <td>Oxidation-controlled holes with fixed vacancy concentration</td>
+      <td>$\sigma\propto p_{\mathrm{O}_2}^{1/4}$</td>
+      <td>p-type conduction.</td>
+    </tr>
+    <tr>
+      <td>Strong blocking electrode polarization</td>
+      <td>Low-frequency capacitance increases strongly</td>
+      <td>Ionic accumulation at electrodes, not necessarily bulk conduction.</td>
+    </tr>
+  </tbody>
+</table>
 
-The most reliable interpretation uses all of the following together: 
+The most reliable interpretation uses all of the following together:
 $$
 \boxed{R(T),\; C(T),\; f_{\mathrm{max}}(T),\; p_{\mathrm{O}_2}\text{ dependence},\; \text{microstructure},\; \text{composition}.}
 $$
@@ -1289,75 +1343,75 @@ $$
 
 ### KNN-Specific Defect Chemistry Before Transport Analysis
 
-KNN is an alkali niobate perovskite with approximate formula 
+KNN is an alkali niobate perovskite with approximate formula
 $$
 (\mathrm{K}_{0.5}\mathrm{Na}_{0.5})\mathrm{NbO}_3.
 $$
- The A-site is occupied by $\mathrm{K}^+$ and $\mathrm{Na}^+$, while the B-site is occupied by $\mathrm{Nb}^{5+}$. During high-temperature sintering, alkali oxide volatility can produce A-site vacancies and oxygen vacancies. For potassium oxide loss, 
+ The A-site is occupied by $\mathrm{K}^+$ and $\mathrm{Na}^+$, while the B-site is occupied by $\mathrm{Nb}^{5+}$. During high-temperature sintering, alkali oxide volatility can produce A-site vacancies and oxygen vacancies. For potassium oxide loss,
 $$
 2\mathrm{K}_{\mathrm{K}}^{\times}+\mathrm{O}_{\mathrm{O}}^{\times}
     \rightleftharpoons
     \mathrm{K}_2\mathrm{O}(g)+2V_{\mathrm{K}}^{\prime}+V_{\mathrm{O}}^{\bullet\bullet}.
 $$
- For sodium oxide loss, 
+ For sodium oxide loss,
 $$
 2\mathrm{Na}_{\mathrm{Na}}^{\times}+\mathrm{O}_{\mathrm{O}}^{\times}
     \rightleftharpoons
     \mathrm{Na}_2\mathrm{O}(g)+2V_{\mathrm{Na}}^{\prime}+V_{\mathrm{O}}^{\bullet\bullet}.
 $$
- Both reactions are charge balanced because 
+ Both reactions are charge balanced because
 $$
 2(-1)+(+2)=0.
 $$
- If alkali loss occurs without other compensating defects, the approximate stoichiometric relation is 
+ If alkali loss occurs without other compensating defects, the approximate stoichiometric relation is
 $$
 [V_{\mathrm{K}}^{\prime}]+[V_{\mathrm{Na}}^{\prime}]\approx 2[V_{\mathrm{O}}^{\bullet\bullet}].
 $$
  This relation is not universal; it changes if electronic carriers, dopants, secondary phases, or non-equilibrium processing are important. However, it gives the basic reason why alkali volatility in KNN is often discussed together with oxygen-vacancy-related conduction.
 
-Oxygen vacancies can also participate in reduction reactions that generate electrons: 
+Oxygen vacancies can also participate in reduction reactions that generate electrons:
 $$
 \mathrm{O}_{\mathrm{O}}^{\times}\rightleftharpoons \frac{1}{2}\mathrm{O}_2(g)+V_{\mathrm{O}}^{\bullet\bullet}+2e^{\prime}.
 $$
- The electrons may localize on niobium sites: 
+ The electrons may localize on niobium sites:
 $$
 \mathrm{Nb}_{\mathrm{Nb}}^{\times}+e^{\prime}
     \rightleftharpoons
     \mathrm{Nb}_{\mathrm{Nb}}^{\prime}.
 $$
- A corresponding small-polaron hopping step is 
+ A corresponding small-polaron hopping step is
 $$
 \mathrm{Nb}_{\mathrm{Nb}}^{\prime}+\mathrm{Nb}_{\mathrm{Nb}}^{\times}
     \rightleftharpoons
     \mathrm{Nb}_{\mathrm{Nb}}^{\times}+\mathrm{Nb}_{\mathrm{Nb}}^{\prime}.
 $$
- Therefore, KNN impedance can contain ionic transport by oxygen vacancies, electronic transport by small polarons, and interfacial blocking or space-charge effects. These processes may overlap, so assignment should be based on resistance, capacitance, activation energy, and atmosphere dependence rather than on activation energy alone [@Hussain2018; @Wang2019].
+ Therefore, KNN impedance can contain ionic transport by oxygen vacancies, electronic transport by small polarons, and interfacial blocking or space-charge effects. These processes may overlap, so assignment should be based on resistance, capacitance, activation energy, and atmosphere dependence rather than on activation energy alone (Hussain2018; Wang2019).
 
 ### Derivation of the Arrhenius Activation Energy
 
-Standard thermally activated conductivity is described phenomenologically by the simple Arrhenius equation: 
+Standard thermally activated conductivity is described phenomenologically by the simple Arrhenius equation:
 $$
 \sigma(T) = \sigma_0 \exp\left( -\frac{E_a}{k_B T} \right)
 $$
- By taking the natural logarithm, we obtain the linear form used for extracting the activation energy $E_a$: 
+ By taking the natural logarithm, we obtain the linear form used for extracting the activation energy $E_a$:
 $$
 \ln \sigma = \ln \sigma_0 - \frac{E_a}{k_B} \left(\frac{1}{T}\right)
 $$
 
 
-However, to truly understand the thermodynamics of ionic conduction, we must derive the activation energy from first principles [@Maier2004]. The macroscopic conductivity is related to the microscopic diffusion coefficient $D$ via the **Nernst-Einstein equation**: 
+However, to truly understand the thermodynamics of ionic conduction, we must derive the activation energy from first principles (Maier2004). The macroscopic conductivity is related to the microscopic diffusion coefficient $D$ via the **Nernst-Einstein equation**:
 $$
 \sigma = \frac{n q^2 D}{k_B T}
 $$
  where $n$ is the charge carrier concentration and $q$ is the elementary charge.
 
-The microscopic diffusion of ions through a lattice (hopping over energy barriers) is given by: 
+The microscopic diffusion of ions through a lattice (hopping over energy barriers) is given by:
 $$
 D = \gamma a^2 \nu_0 \exp\left( \frac{\Delta S_m}{k_B} \right) \exp\left( -\frac{\Delta H_m}{k_B T} \right)
 $$
  where $\gamma$ is a geometric factor, $a$ is the jump distance, $\nu_0$ is the attempt frequency (phonon frequency), $\Delta S_m$ is the entropy of migration, and $\Delta H_m$ is the enthalpy of migration (the energy barrier).
 
-Substituting $D$ back into the Nernst-Einstein equation yields the complete expression for ionic conductivity: 
+Substituting $D$ back into the Nernst-Einstein equation yields the complete expression for ionic conductivity:
 $$
 \sigma T = \left[ \frac{n q^2 \gamma a^2 \nu_0}{k_B} \exp\left(\frac{\Delta S_m}{k_B}\right) \right] \exp\left( -\frac{\Delta H_m}{k_B T} \right)
 $$
@@ -1373,27 +1427,27 @@ Furthermore, the activation energy ($E_a$) measured from the slope of such plots
 
 ### Bridging Activation Energy and Fermi Energy
 
-While ionic conduction depends on lattice enthalpies, electronic conduction (by electrons or electron holes) introduces the concept of the **Fermi Energy ($E_F$)**. Impedance spectroscopy in mixed ionic-electronic conductors like KNN often requires bridging the macroscopic activation energy $E_a$ with the microscopic $E_F$ [@Tuller2011].
+While ionic conduction depends on lattice enthalpies, electronic conduction (by electrons or electron holes) introduces the concept of the **Fermi Energy ($E_F$)**. Impedance spectroscopy in mixed ionic-electronic conductors like KNN often requires bridging the macroscopic activation energy $E_a$ with the microscopic $E_F$ (Tuller2011).
 
-From solid-state semiconductor physics, the concentration of conduction band electrons $n_e$ is related to the energy difference between the conduction band edge ($E_C$) and the Fermi level ($E_F$): 
+From solid-state semiconductor physics, the concentration of conduction band electrons $n_e$ is related to the energy difference between the conduction band edge ($E_C$) and the Fermi level ($E_F$):
 $$
 n_e = N_C \exp\left( -\frac{E_C - E_F}{k_B T} \right)
 $$
  where $N_C$ is the effective density of states in the conduction band.
 
-In many transition metal oxides (like niobates), electrons do not move freely but self-trap to form **small polarons**. The mobility of a small polaron is itself a thermally activated hopping process: 
+In many transition metal oxides (like niobates), electrons do not move freely but self-trap to form **small polarons**. The mobility of a small polaron is itself a thermally activated hopping process:
 $$
 \mu_e = \frac{\mu_0}{T} \exp\left( -\frac{E_{hop}}{k_B T} \right)
 $$
 
 
-The total electronic conductivity ($\sigma_e = n_e e \mu_e$) therefore becomes: 
+The total electronic conductivity ($\sigma_e = n_e e \mu_e$) therefore becomes:
 $$
 \sigma_e T = e N_C \mu_0 \exp\left( -\frac{(E_C - E_F) + E_{hop}}{k_B T} \right)
 $$
 
 
-By comparing this fundamental expression to the phenomenological Arrhenius equation, a critical physical relationship is established: 
+By comparing this fundamental expression to the phenomenological Arrhenius equation, a critical physical relationship is established:
 $$
 E_a = (E_C - E_F) + E_{hop}
 $$
@@ -1401,7 +1455,7 @@ $$
 
 ### Typical Activation Energies in KNN
 
-In potassium sodium niobate ($\text{K}_{0.5}\text{Na}_{0.5}\text{NbO}_3$, KNN) lead-free ceramics, the volatilization of alkali metal ions during high-temperature sintering inevitably generates alkali and oxygen vacancies. Based on impedance studies and Arrhenius analysis, representative KNN and KNN-based ceramics often show activation-energy ranges like the following. These assignments are useful guidelines, not unique proof of mechanism; they should be checked against capacitance, atmosphere dependence, and microstructure [@Hussain2018; @Wang2019; @Moulson2003]:
+In potassium sodium niobate ($\text{K}_{0.5}\text{Na}_{0.5}\text{NbO}_3$, KNN) lead-free ceramics, the volatilization of alkali metal ions during high-temperature sintering inevitably generates alkali and oxygen vacancies. Based on impedance studies and Arrhenius analysis, representative KNN and KNN-based ceramics often show activation-energy ranges like the following. These assignments are useful guidelines, not unique proof of mechanism; they should be checked against capacitance, atmosphere dependence, and microstructure (Hussain2018; Wang2019; Moulson2003):
 
 - **0.4--0.6 eV (Low Temperature):** Often assigned to local defect motion, oxygen-vacancy-related relaxation, or small-polaron hopping of defect-trapped electrons.
 
@@ -1415,7 +1469,7 @@ In potassium sodium niobate ($\text{K}_{0.5}\text{Na}_{0.5}\text{NbO}_3$, KNN) l
 
 Regarding the physical pathway of conduction within the perovskite lattice:
 
-- The **oxygen ion migration occurs through a saddle point**, which is geometrically represented by a triangle formed by two A-site cations and one B-site cation [@Khan1998].
+- The **oxygen ion migration occurs through a saddle point**, which is geometrically represented by a triangle formed by two A-site cations and one B-site cation (Khan1998).
 
 ### Mott Variable Range Hopping (VRH)
 
@@ -1425,39 +1479,39 @@ While Arrhenius behavior describes thermal excitation over a static barrier, Mot
 
 #### Derivation of the Mott $T^{-1/4}$ Law
 
-The probability $P$ of an electron hopping between two localized states depends on the spatial distance $R$ (quantum tunneling) and the activation energy $\Delta E$ (thermal excitation): 
+The probability $P$ of an electron hopping between two localized states depends on the spatial distance $R$ (quantum tunneling) and the activation energy $\Delta E$ (thermal excitation):
 $$
 P \propto \exp\left( -2\alpha R - \frac{\Delta E}{k_B T} \right)
 $$
  where $\alpha = 1/\xi$ ($\xi$ is the localization length) and $k_B$ is the Boltzmann constant.
 
-Let $N(E_F)$ be the density of states at the Fermi level. The average number of states available within a sphere of radius $R$ and an energy range $\Delta E$ is approximately 1: 
+Let $N(E_F)$ be the density of states at the Fermi level. The average number of states available within a sphere of radius $R$ and an energy range $\Delta E$ is approximately 1:
 $$
 \frac{4}{3}\pi R^3 \cdot \Delta E \cdot N(E_F) \approx 1 \implies \Delta E \approx \frac{3}{4\pi R^3 N(E_F)}
 $$
 
 
-Substitute $\Delta E$ into the hopping probability and minimize the exponent $p(R)$ with respect to $R$: 
+Substitute $\Delta E$ into the hopping probability and minimize the exponent $p(R)$ with respect to $R$:
 $$
 p(R) = 2\alpha R + \frac{3}{4\pi R^3 N(E_F) k_B T}
 $$
- 
+
 $$
 \frac{dp(R)}{dR} = 2\alpha - \frac{9}{4\pi R^4 N(E_F) k_B T} = 0 \implies R_{opt} = \left[ \frac{9}{8\pi \alpha N(E_F) k_B T} \right]^{1/4}
 $$
 
 
-Substituting $R_{opt}$ back into $p(R)$ yields: 
+Substituting $R_{opt}$ back into $p(R)$ yields:
 $$
 p_{opt} = 2\alpha R_{opt} + \frac{1}{3}(2\alpha R_{opt}) = \frac{8}{3}\alpha R_{opt} = \left( \frac{T_0}{T} \right)^{1/4}
 $$
 
 
-Thus, the conductivity $\sigma$ follows the Mott VRH equation: 
+Thus, the conductivity $\sigma$ follows the Mott VRH equation:
 $$
 \sigma = \sigma_0 \exp\left[ -\left(\frac{T_0}{T}\right)^{1/4} \right]
 $$
- where the characteristic temperature $T_0$ is defined as: 
+ where the characteristic temperature $T_0$ is defined as:
 $$
 T_0 = \frac{\beta \alpha^3}{k_B N(E_F)} = \frac{\beta}{k_B N(E_F) \xi^3}
 $$
@@ -1465,13 +1519,13 @@ $$
 
 #### Interpretation of the Plot and Slope
 
-By plotting $\ln \sigma$ versus $T^{-1/4}$, the data yields a straight line with a slope $m$: 
+By plotting $\ln \sigma$ versus $T^{-1/4}$, the data yields a straight line with a slope $m$:
 $$
 \ln \sigma = \ln \sigma_0 - T_0^{1/4} \cdot T^{-1/4} \implies m = -T_0^{1/4}
 $$
 
 
-To further verify whether the mechanism is Mott VRH or Arrhenius, the Zabrodskii W-plot can be used. It relies on the derivative of logarithmic conductivity: 
+To further verify whether the mechanism is Mott VRH or Arrhenius, the Zabrodskii W-plot can be used. It relies on the derivative of logarithmic conductivity:
 $$
 W = \frac{d(\ln \sigma)}{d(\ln T)}
 $$
@@ -1510,7 +1564,3 @@ A. K. Jonscher, *Dielectric Relaxation in Solids*. London: Chelsea Dielectrics P
 N. F. Mott and E. A. Davis, *Electronic Processes in Non-Crystalline Materials*, 2nd ed. Oxford: Clarendon Press, 1979.
 
 B. A. Boukamp, "A nonlinear least squares fit procedure for analysis of immittance data of electrochemical systems," *Solid State Ionics*, vol. 20, no. 1, pp. 31--44, 1986.
-
-</article>
-
-

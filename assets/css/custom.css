@@ -5,10 +5,12 @@
 
 header {
   width: 260px;
+  padding-top: 2.8em;
 }
 
 section {
   width: 760px;
+  padding-top: 2.8em;
 }
 
 .profile-meta {
@@ -52,21 +54,27 @@ section {
 }
 
 .site-nav {
-  display: grid;
-  gap: 0.42rem;
-  margin: 1.1rem auto 0;
-  max-width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  width: min(1080px, calc(100% - 30px));
+  margin: 1rem auto 0;
+  padding: 0 0 0.85rem;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .site-nav a {
   display: block;
   border: 1px solid #d7dee8;
   border-radius: 6px;
-  padding: 0.42rem 0.65rem;
+  min-width: 106px;
+  padding: 0.46rem 0.8rem;
   color: #043361;
   background: #ffffff;
   font-size: 0.92rem;
   line-height: 1.2;
+  text-align: center;
 }
 
 .site-nav a:hover,
@@ -217,22 +225,22 @@ img {
   background: #f8fafc;
 }
 
-.knowledge-note h2 {
+.knowledge-page section h2 {
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #e2e8f0;
 }
 
-.knowledge-note h3 {
+.knowledge-page section h3 {
   margin-top: 1.4rem;
 }
 
-.knowledge-note table {
+.knowledge-page section table {
   display: block;
   overflow-x: auto;
 }
 
-.knowledge-note mjx-container {
+.knowledge-page section mjx-container {
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
@@ -257,6 +265,10 @@ img {
     background: #252736;
   }
 
+  .site-nav {
+    border-bottom-color: #334155;
+  }
+
   .site-nav a:hover,
   .site-nav a.active {
     color: #101828;
@@ -264,7 +276,7 @@ img {
     background: rgb(62, 183, 240);
   }
 
-  .knowledge-note h2 {
+  .knowledge-page section h2 {
     border-top-color: #334155;
   }
 }
@@ -286,12 +298,9 @@ img {
     padding: 1.2rem 0;
   }
 
-  .site-nav {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    max-width: none;
-  }
-
   .site-nav a {
+    min-width: auto;
+    flex: 1 1 120px;
     padding: 0.5rem 0.35rem;
     font-size: 0.84rem;
   }
@@ -303,8 +312,8 @@ img {
 }
 
 @media print, screen and (max-width: 620px) {
-  .site-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .site-nav a {
+    flex-basis: calc(50% - 0.55rem);
   }
 
   .pub-row {

@@ -37,18 +37,44 @@
     {% if site.mathjax %}
     <script>
       window.MathJax = {
+        loader: {load: ['[tex]/ams', '[tex]/textmacros', '[tex]/noerrors', '[tex]/noundefined']},
         tex: {
           inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          processEnvironments: true,
+          packages: {'[+]': ['ams', 'textmacros', 'noerrors', 'noundefined']},
+          macros: {
+            kB: 'k_{\\mathrm{B}}',
+            pOtwo: 'p_{\\mathrm{O}_2}',
+            vo: 'V_{\\mathrm{O}}^{\\bullet\\bullet}',
+            oo: '\\mathrm{O}_{\\mathrm{O}}^{\\times}',
+            va: 'V_{\\mathrm{A}}^{\\prime}',
+            vk: 'V_{\\mathrm{K}}^{\\prime}',
+            vna: 'V_{\\mathrm{Na}}^{\\prime}',
+            vnb: 'V_{\\mathrm{Nb}}^{\\prime\\prime\\prime\\prime\\prime}',
+            electron: 'e^{\\prime}',
+            hole: 'h^{\\bullet}'
+          }
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         },
         svg: { fontCache: 'global' }
       };
     </script>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"></script>
     {% endif %}
 
   </head>
-  <body>
+  <body class="{{ page.body_class }}">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ '/research.html' | relative_url }}" {% if page.url == '/research.html' %}class="active"{% endif %}>Research</a>
+      <a href="{{ '/publications.html' | relative_url }}" {% if page.url == '/publications.html' %}class="active"{% endif %}>Publication</a>
+      <a href="{{ '/gallery.html' | relative_url }}" {% if page.url == '/gallery.html' %}class="active"{% endif %}>Gallery</a>
+      <a href="{{ '/knowledge.html' | relative_url }}" {% if page.url == '/knowledge.html' %}class="active"{% endif %}>Knowledge</a>
+    </nav>
     <div class="wrapper">
       <header>
         
@@ -109,14 +135,6 @@
         </a>
         {% endif %}
         </div>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
-          <a href="{{ '/research.html' | relative_url }}" {% if page.url == '/research.html' %}class="active"{% endif %}>Research</a>
-          <a href="{{ '/publications.html' | relative_url }}" {% if page.url == '/publications.html' %}class="active"{% endif %}>Publications</a>
-          <a href="{{ '/gallery.html' | relative_url }}" {% if page.url == '/gallery.html' %}class="active"{% endif %}>Gallery</a>
-          <a href="{{ '/knowledge.html' | relative_url }}" {% if page.url == '/knowledge.html' %}class="active"{% endif %}>Knowledge</a>
-        </nav>
-
       </header>
       <section>
 
