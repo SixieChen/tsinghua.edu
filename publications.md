@@ -8,7 +8,11 @@ permalink: /publications.html
 
 ### Journal Articles
 
-1. [Enhancing CO2 reduction via Cu nanocrystals decorated perovskite as cathode for solid oxide electrolysis cells](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nnmO3tEAAAAJ&citation_for_view=nnmO3tEAAAAJ:UeHWp8X0CEIC)  
+1. [Giant Electrostrain from Inherent Strain for KNN-Based Ceramics](https://scholar.google.com/scholar?q=%22Giant+Electrostrain+from+Inherent+Strain+for+KNN-Based+Ceramics%22)  
+   Z. Cen, **S. Chen**, et al.  
+   *ACS Applied Materials & Interfaces*, 2026.
+
+2. [Enhancing CO2 reduction via Cu nanocrystals decorated perovskite as cathode for solid oxide electrolysis cells](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nnmO3tEAAAAJ&citation_for_view=nnmO3tEAAAAJ:UeHWp8X0CEIC)  
    Y. Lin, M. Xu, X. Chen, S. Chen, X. Li, W. Yan, R. Zhou, and D. Chen.  
    *Ceramics International* **51**(9), 11889-11898.
 
