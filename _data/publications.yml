@@ -15,11 +15,11 @@ main:
     notes: Published
     image: ./assets/img/1-s2.0-S0272884225000410-gr8_lrg.jpg
 
-  - title: Regulating the Performance of (La0.5Sr0.5)1±xFeO3 Fuel Cell Air Electrodes by Stoichiometric Ratio Control
-    authors: <strong>Sixie Chen</strong>, Min Xu, Han Qin, Peng Liu, Di Chen* (*Corresponding authors)
-    conference_short: RE
-    conference: Rare Earth <strong>(RE)</strong>, 2025.
-    pdf: https://sixiechen.github.io/tsinghua.edu/
-    page: https://sixiechen.github.io/tsinghua.edu/
-    notes: Accepted
-    image: ./assets/img/figure2.png
+  # - title: Regulating the Performance of (La0.5Sr0.5)1±xFeO3 Fuel Cell Air Electrodes by Stoichiometric Ratio Control
+  #   authors: <strong>Sixie Chen</strong>, Min Xu, Han Qin, Peng Liu, Di Chen* (*Corresponding authors)
+  #   conference_short: RE
+  #   conference: Rare Earth <strong>(RE)</strong>, 2025.
+  #   pdf: https://sixiechen.github.io/tsinghua.edu/
+  #   page: https://sixiechen.github.io/tsinghua.edu/
+  #   notes: Accepted
+  #   image: ./assets/img/figure2.png
