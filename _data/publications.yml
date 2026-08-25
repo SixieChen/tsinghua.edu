@@ -6,7 +6,8 @@ main:
     conference: ACS Applied Materials & Interfaces, 2026.
     page: https://scholar.google.com/scholar?q=%22Giant+Electrostrain+from+Inherent+Strain+for+KNN-Based+Ceramics%22
     notes: Published
-
+    image: ./assets/img/am-2026-107149_0005.png
+    
   - title: Enhancing CO2 Reduction via Cu Nanocrystals Decorated Perovskite as Cathode for Solid Oxide Electrolysis Cells
     authors: Y. Lin, M. Xu, X. Chen, <strong>S. Chen</strong>, X. Li, W. Yan, R. Zhou, D. Chen*
     conference_short: CI
