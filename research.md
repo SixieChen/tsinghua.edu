@@ -7,9 +7,8 @@ permalink: /research.html
 ## Research Interests
 
 - **Functional Ceramics**
-- **Defect Chemistry**
-- **Solid State Ionics**
-- **Impedance Spectroscopy**
+- **Ferroelectrics**
+- **Solid State Chemistry**
 
 {% include_relative _includes/publications.md %}
 
