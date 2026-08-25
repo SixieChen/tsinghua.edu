@@ -17,7 +17,7 @@ permalink: /publications.html
    *Ceramics International* **51**(9), 11889-11898.
 
 3. [Regulating the Performance of (La0.5Sr0.5)1±xFeO3 Fuel Cell Air Electrodes by Stoichiometric Ratio Control](https://sixiechen.github.io/tsinghua.edu/)
-   **S. Chen**, M. Xu, H. Qin, P. Liu, D. Chen* (*Corresponding authors)
+   **S. Chen**, M. Xu, H. Qin, P. Liu, D. Chen* (*Corresponding authors).
    *Rare Earth* accepted, 2025.
 
 ### Forthcoming
