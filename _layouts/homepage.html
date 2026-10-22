@@ -6,6 +6,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (() => {
+        const root = document.documentElement;
+        try {
+          root.dataset.theme = localStorage.getItem('sixie-theme') ||
+            (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          root.dataset.motion = localStorage.getItem('sixie-motion') ||
+            (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'off' : 'on');
+        } catch (_) {
+          root.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          root.dataset.motion = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'off' : 'on';
+        }
+      })();
+    </script>
     <meta name="description" content="{{ site.description }}">
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
@@ -34,6 +48,7 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="{{ '/assets/css/experience.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     {% if site.mathjax %}
     <script>
       window.MathJax = {
@@ -68,18 +83,33 @@
 
   </head>
   <body class="{{ page.body_class }}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <canvas id="lattice-field" aria-hidden="true"></canvas>
     <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-links">
+      <span class="nav-indicator" aria-hidden="true"></span>
       <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
       <a href="{{ '/research.html' | relative_url }}" {% if page.url == '/research.html' %}class="active"{% endif %}>Research</a>
       <a href="{{ '/publications.html' | relative_url }}" {% if page.url == '/publications.html' %}class="active"{% endif %}>Publication</a>
       <a href="{{ '/gallery.html' | relative_url }}" {% if page.url == '/gallery.html' %}class="active"{% endif %}>Gallery</a>
       <a href="{{ '/knowledge.html' | relative_url }}" {% if page.url == '/knowledge.html' %}class="active"{% endif %}>Knowledge</a>
+      </div>
+      <div class="site-tools">
+        <button class="icon-control" id="theme-toggle" type="button" aria-label="Switch color theme" data-tooltip="Switch color theme"><i class="fas fa-moon" aria-hidden="true"></i></button>
+        <button class="icon-control" id="motion-toggle" type="button" aria-label="Pause animations" aria-pressed="false" data-tooltip="Pause animations"><i class="fas fa-pause" aria-hidden="true"></i></button>
+      </div>
+      <div class="reading-progress" aria-hidden="true"></div>
     </nav>
     <div class="wrapper">
       <header>
         
         {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <a class="image avatar"><picture>
+          {% if site.avatar contains 'Avatar_SixieChen_34.png' %}
+          <source srcset="{{ '/assets/img/previews/avatar-400.webp' | relative_url }}" type="image/webp">
+          {% endif %}
+          <img src="{{ site.avatar }}" alt="avatar" width="140" height="140" fetchpriority="high" />
+        </picture></a>
         {% endif %}
 
         <h1>{{ site.title }}</h1>
@@ -136,7 +166,7 @@
         {% endif %}
         </div>
       </header>
-      <section>
+      <section id="main-content" tabindex="-1">
 
       {{ content }}
 
@@ -151,6 +181,8 @@
         
       </footer>
     </div>
+    <button class="icon-control back-to-top" id="back-to-top" type="button" aria-label="Back to top" data-tooltip="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+    <script defer src="{{ '/assets/js/experience.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>

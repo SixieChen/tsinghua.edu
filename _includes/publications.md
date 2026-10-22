@@ -9,7 +9,11 @@
 <div class="pub-row">
   <div class="col-sm-3 abbr">
     {% if link.image %} 
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" alt="{{ link.title }}">
+    <button class="publication-image" type="button" data-image-viewer="publications" aria-label="Enlarge figure: {{ link.title | escape }}">
+      {% assign image_size = site.data.image_sizes[link.image] %}
+      <img src="{{ image_size.preview | default: link.image | relative_url }}" data-large="{{ image_size.large | default: link.image | relative_url }}" data-original="{{ link.image | relative_url }}" class="teaser img-fluid z-depth-1" alt="{{ link.title | escape }}" loading="lazy" {% if image_size %}width="{{ image_size.width }}" height="{{ image_size.height }}" style="aspect-ratio: {{ image_size.width }} / {{ image_size.height }};"{% endif %}>
+      <span class="image-expand" aria-hidden="true"><i class="fas fa-expand"></i></span>
+    </button>
     {% endif %}
     {% if link.conference_short %} 
     <abbr class="badge">{{ link.conference_short }}</abbr>

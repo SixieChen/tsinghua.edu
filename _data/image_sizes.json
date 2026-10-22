@@ -1,0 +1,134 @@
+{
+  "/assets/images/1.jpg": {
+    "width": 670,
+    "height": 445
+  },
+  "/assets/images/2.jpg": {
+    "width": 670,
+    "height": 534
+  },
+  "/assets/images/3.jpg": {
+    "width": 670,
+    "height": 502
+  },
+  "/assets/images/4.jpg": {
+    "width": 670,
+    "height": 502
+  },
+  "/assets/images/5.jpg": {
+    "width": 670,
+    "height": 502
+  },
+  "/assets/images/6.jpg": {
+    "width": 800,
+    "height": 600
+  },
+  "/assets/images/7.jpg": {
+    "width": 670,
+    "height": 502
+  },
+  "/assets/images/8.jpg": {
+    "width": 1080,
+    "height": 1440
+  },
+  "/assets/images/9.jpg": {
+    "width": 670,
+    "height": 502
+  },
+  "/assets/images/10.jpg": {
+    "width": 800,
+    "height": 600
+  },
+  "/assets/images/11.jpg": {
+    "width": 670,
+    "height": 502
+  },
+  "/assets/images/12.jpg": {
+    "width": 800,
+    "height": 600
+  },
+  "/assets/images/13.jpg": {
+    "width": 1920,
+    "height": 1280
+  },
+  "/assets/images/14.jpg": {
+    "width": 1120,
+    "height": 1494
+  },
+  "/assets/images/15.jpg": {
+    "width": 1942,
+    "height": 1280
+  },
+  "/assets/images/16.jpg": {
+    "width": 6000,
+    "height": 4000
+  },
+  "/assets/images/17.jpg": {
+    "width": 1706,
+    "height": 1279
+  },
+  "/assets/images/18.jpg": {
+    "width": 4000,
+    "height": 3000
+  },
+  "/assets/images/19.jpg": {
+    "width": 1707,
+    "height": 1279
+  },
+  "/assets/images/20.jpg": {
+    "width": 5472,
+    "height": 3648
+  },
+  "/assets/images/21.jpg": {
+    "width": 6000,
+    "height": 4000
+  },
+  "/assets/images/22.jpg": {
+    "width": 1792,
+    "height": 1280
+  },
+  "/assets/images/23.jpg": {
+    "width": 5088,
+    "height": 3392
+  },
+  "/assets/images/24.jpg": {
+    "width": 4096,
+    "height": 3072
+  },
+  "/assets/images/25.jpg": {
+    "width": 6000,
+    "height": 4000
+  },
+  "/assets/images/26.jpg": {
+    "width": 1923,
+    "height": 1279
+  },
+  "/assets/images/27.jpg": {
+    "width": 5472,
+    "height": 3648
+  },
+  "/assets/images/28.jpg": {
+    "width": 5472,
+    "height": 3648
+  },
+  "/assets/images/29.jpg": {
+    "width": 5472,
+    "height": 3648
+  },
+  "/assets/images/30.jpg": {
+    "width": 5568,
+    "height": 3712
+  },
+  "./assets/img/am-2026-107149_0005.png": {
+    "width": 942,
+    "height": 562,
+    "preview": "/assets/img/previews/paper-1-800.webp",
+    "large": "/assets/img/previews/paper-1-1600.webp"
+  },
+  "./assets/img/1-s2.0-S0272884225000410-gr8_lrg.jpg": {
+    "width": 2370,
+    "height": 2614,
+    "preview": "/assets/img/previews/paper-2-800.webp",
+    "large": "/assets/img/previews/paper-2-1600.webp"
+  }
+}

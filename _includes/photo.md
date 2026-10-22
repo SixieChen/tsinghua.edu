@@ -4,62 +4,22 @@
   <div class="gallery-grid">
     {% for i in (1..30) %}
       {% assign image_path = '/assets/images/' | append: i | append: '.jpg' %}
-      <button class="gallery-item" type="button" onclick="openGalleryModal(this)" aria-label="Open gallery image {{ i }}">
-        <img src="{{ image_path | relative_url }}"
+      {% assign image_size = site.data.image_sizes[image_path] %}
+      {% assign preview_path = '/assets/images/previews/' | append: i %}
+      <button class="gallery-item" type="button" data-image-viewer="gallery" aria-label="Open gallery image {{ i }}">
+        <img src="{{ preview_path | append: '-640.webp' | relative_url }}"
+             srcset="{{ preview_path | append: '-640.webp' | relative_url }} 640w, {{ preview_path | append: '-1280.webp' | relative_url }} 1280w"
+             sizes="(max-width: 540px) calc((100vw - 52px) / 2), (max-width: 800px) calc((100vw - 80px) / 3), 245px"
+             data-large="{{ preview_path | append: '-1280.webp' | relative_url }}"
+             data-original="{{ image_path | relative_url }}"
+             width="{{ image_size.width }}" height="{{ image_size.height }}"
+             style="aspect-ratio: {{ image_size.width }} / {{ image_size.height }};"
              loading="lazy"
              alt="Gallery image {{ i }}"
              class="gallery-image">
+        <span class="image-expand" aria-hidden="true"><i class="fas fa-expand"></i></span>
       </button>
     {% endfor %}
   </div>
 
-  <div id="galleryModal" class="gallery-modal" aria-hidden="true">
-    <button class="gallery-close" type="button" onclick="closeGalleryModal()" aria-label="Close gallery">&times;</button>
-    <img class="gallery-modal-content" id="galleryModalImg" alt="">
-  </div>
 </div>
-
-<script>
-let currentModalImage = null;
-
-function openGalleryModal(button) {
-  const image = button.querySelector('img');
-  const modal = document.getElementById('galleryModal');
-  const modalImg = document.getElementById('galleryModalImg');
-
-  currentModalImage = image;
-  modal.style.display = 'flex';
-  modal.setAttribute('aria-hidden', 'false');
-  modalImg.src = image.src;
-  modalImg.alt = image.alt;
-  document.body.style.overflow = 'hidden';
-}
-
-function closeGalleryModal() {
-  const modal = document.getElementById('galleryModal');
-  modal.style.display = 'none';
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = 'auto';
-  currentModalImage = null;
-}
-
-function navigateGallery(direction) {
-  if (!currentModalImage) return;
-
-  const images = Array.from(document.querySelectorAll('.gallery-image'));
-  const currentIndex = images.indexOf(currentModalImage);
-  const newIndex = (currentIndex + direction + images.length) % images.length;
-  images[newIndex].closest('.gallery-item').click();
-}
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') closeGalleryModal();
-  if (event.key === 'ArrowLeft') navigateGallery(-1);
-  if (event.key === 'ArrowRight') navigateGallery(1);
-});
-
-document.addEventListener('click', function(event) {
-  const modal = document.getElementById('galleryModal');
-  if (event.target === modal) closeGalleryModal();
-});
-</script>
