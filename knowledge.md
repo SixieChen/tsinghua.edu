@@ -157,7 +157,7 @@ A resistor does not change with frequency and has no imaginary part.
 
 - **Log Magnitude:** $\log_{10}|Z_R| = \log_{10}(R)$ (A flat, horizontal line)
 
-- **Phase:** $\theta_R = 0^\circ$
+- **Phase:** $\phi_R = 0^\circ$
 
 ##### Capacitor ($C$)
 
@@ -167,7 +167,7 @@ A capacitor's impedance drops as frequency increases.
 
 - **Log Magnitude:** $\log_{10}|Z_C| = -\log_{10}(\omega) - \log_{10}(C)$ (A straight line going downwards with a slope of -1).
 
-- **Phase:** $\theta_C = -90^\circ$ or $-\frac{\pi}{2}$ rad
+- **Phase:** $\phi_C = -90^\circ$ or $-\frac{\pi}{2}$ rad
 
 ##### Inductor ($L$)
 
@@ -177,7 +177,7 @@ An inductor's impedance rises as frequency increases.
 
 - **Log Magnitude:** $\log_{10}|Z_L| = \log_{10}(\omega) + \log_{10}(L)$ (A straight line going upwards with a slope of +1).
 
-- **Phase:** $\theta_L = +90^\circ$ or $+\frac{\pi}{2}$ rad
+- **Phase:** $\phi_L = +90^\circ$ or $+\frac{\pi}{2}$ rad
 
 #### The RC Parallel Element and Relaxation
 
@@ -1642,7 +1642,7 @@ $$
 \end{aligned}
 $$
 
- The peak occurs when
+For $0<n\le1$, the peak occurs when
 
 $$
 G^2-A^2=0,
