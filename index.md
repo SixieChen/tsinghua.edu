@@ -25,6 +25,7 @@ I am currently a phd candidate in State Key Laboratory of New Ceramics and Fine 
 
 ## News
 
+- **[Sep. 2026]** Sixie Chen joins Department of Material Science and Engineering, Tsinghua University, as a Dotoral Student.
 - **[June. 2026]** Sixie Chen graduates from Tsinghua University with bachelor degree.
 - **[Sep. 2025]** Sixie Chen joins the State Key Laboratory of New Ceramics and Fine Processing, advised by **Prof. Ke Wang** and **Dr. Ze Xu**.
 - **[Jun. 2025]** Sixie Chen visits the Department of Chemistry, Indiana University Bloomington, advised by Prof. Sara Skrabalak and Dr. Kapuria Nilotpal.
